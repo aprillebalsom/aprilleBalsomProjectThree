@@ -23,9 +23,6 @@
 // allow user to "take another photo" by removing all selections and scrolling back to the top 
 
 
-
-//insert document ready
-
 const filmPhoto = {
     leica: [
         {
@@ -144,11 +141,13 @@ const filmPhoto = {
 }
 
 
+//TODO -  insert document ready
+
 const form = $('form');
 
 //on submit, prevent default
 //
-form.on('submit', (e) => {
+$('form').on('submit', function(e) {
     e.preventDefault();
     console.log('yay');
 });
