@@ -1,0 +1,43 @@
+//GENERAL STYLES
+html {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    max-width: 1220px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: $backgroundColor;
+    color: $fontColor;
+    border: 1px solid $fontColor;
+    margin: 20px;
+
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+header {
+    // height: 50vh;
+    padding: 40px 0;
+}
+
+main {
+    padding: 40px 10px;
+}
+
+footer {
+    text-align: right;
+    padding: 20px 0;
+}
+
+h1 {
+    padding: 10px;
+}
+
+h2 {
+    padding: 10px 0;
+}
