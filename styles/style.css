@@ -264,6 +264,10 @@ button {
   border: none;
 }
 
+button {
+  background: none;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -276,8 +280,8 @@ html {
 
 body {
   background-color: #eae3d9;
-  color: rgba(0, 0, 0, 0.75);
-  border: 1px solid rgba(0, 0, 0, 0.75);
+  color: #2f2d2b;
+  border: 1px solid #2f2d2b;
   margin: 20px;
   font-size: 2rem;
   font-family: 'Open Sans', sans-serif;
@@ -304,4 +308,12 @@ h1 {
 
 h2 {
   padding: 10px 0;
+}
+
+header img {
+  width: 50%;
+}
+
+.test {
+  font-size: 70px;
 }

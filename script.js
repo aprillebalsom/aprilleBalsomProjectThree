@@ -174,7 +174,11 @@ $(function(){
             //  userSelections.push(cameraTypes[i]);
             //  console.log(userSelections);
 
-            $('section').append(`<p> yay </p>`);
+                
+                $('.tester').addClass('test');
+
+
+                $('section').append(`<p>Shot on a(n) ${cameraPick} camera using ${userSelection.film} film </p>`);
 
 
                 
