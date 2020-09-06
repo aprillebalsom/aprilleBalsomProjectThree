@@ -28,43 +28,43 @@ const filmPhoto = {
         {
             film: 'fuji',
             subject: 'landscape',
-            photo: 'leicaFujiLandscape'
+            photo: '#leicaFujiLandscape'
         },
         {
             film: 'fuji',
             subject: 'people',
-            photo: 'leciaFujiPeople'
+            photo: '#leciaFujiPeople'
         },
         {
             film: 'fuji',
             subject: 'surprise',
-            photo: 'leciaFujiSurprise'
+            photo: '#leciaFujiSurprise'
         },
         {
             film: 'kodak',
             subject: 'landscape',
-            photo: 'leciaKodakLandscape'
+            photo: '#leciaKodakLandscape'
         },
         {
             film: 'kodak',
             subject: 'people',
-            photo: 'leicaKodakPeople'
+            photo: '#leicaKodakPeople'
         },
         {
             film: 'kodak',
             subject: 'surprise',
-            photo: 'leciaKodakSurprise'
+            photo: '#leciaKodakSurprise'
             
         },
         {
             film: 'ilford',
             subject: 'landscape',
-            photo: 'leciaIlfordLandscape'
+            photo: '#leciaIlfordLandscape'
         },
         {
             film: 'ilford',
             subject: 'people',
-            photo: 'leciaIlfordPeople'
+            photo: '#leciaIlfordPeople'
         },
         {
             film: 'ilford',
@@ -76,47 +76,47 @@ const filmPhoto = {
         {
             film: 'fuji',
             subject: 'landscape',
-            photo: 'olympusFujiLandscape'
+            photo: '#olympusFujiLandscape'
         },
         {
             film: 'fuji',
             subject: 'people',
-            photo: 'olympusFujiPeople'
+            photo: '#olympusFujiPeople'
         },
         {
             film: 'fuji',
             subject: 'surprise',
-            photo: 'olympusFujiSurprise'
+            photo: '#olympusFujiSurprise'
         },
         {
             film: 'kodak',
             subject: 'landscape',
-            photo: 'olympusKodakLandscape'
+            photo: '#olympusKodakLandscape'
         },
         {
             film: 'kodak',
             subject: 'people',
-            photo: 'olympusKodakPeople'
+            photo: '#olympusKodakPeople'
         },
         {
             film: 'kodak',
             subject: 'surprise',
-            photo: '.olympusKodakSurprise'
+            photo: '#olympusKodakSurprise'
         },
         {
             film: 'ilford',
             subject: 'landscape',
-            photo: 'olympusIlfordLandscape'
+            photo: '#olympusIlfordLandscape'
         },
         {
             film: 'ilford',
             subject: 'people',
-            photo: 'olympusIlfordPeople'
+            photo: '#olympusIlfordPeople'
         },
         {
             film: 'ilford',
             subject: 'surprise',
-            photo: 'olympusIlfordSurprise'
+            photo: '#olympusIlfordSurprise'
         }
     ],
     canon: [
@@ -128,42 +128,42 @@ const filmPhoto = {
         {
             film: 'fuji',
             subject: 'people',
-            photo: 'canonFujiPeople'
+            photo: '#canonFujiPeople'
         },
         {
             film: 'fuji',
             subject: 'surprise',
-            photo: 'canonFujiSurprise'
+            photo: '#canonFujiSurprise'
         },
         {
             film: 'kodak',
             subject: 'landscape',
-            photo: 'canonKodakLandscape'
+            photo: '#canonKodakLandscape'
         },
         {
             film: 'kodak',
             subject: 'people',
-            photo: 'canonKodakPeople'
+            photo: '#canonKodakPeople'
         },
         {
             film: 'kodak',
             subject: 'surprise',
-            photo: 'canonKodakSurprise'
+            photo: '#canonKodakSurprise'
         },
         {
             film: 'ilford',
             subject: 'landscape',
-            photo: 'canonIlfordLandscape'
+            photo: '#canonIlfordLandscape'
         },
         {
             film: 'ilford',
             subject: 'people',
-            photo: 'canonIlfordPeople'
+            photo: '#canonIlfordPeople'
         },
         {
             film: 'ilford',
             subject: 'surprise',
-            photo: 'canonIlfordSurprise'
+            photo: '#canonIlfordSurprise'
         }
     ]
 }
