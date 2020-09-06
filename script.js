@@ -6,7 +6,7 @@
 // take users first selection and match to the corresponding object
 // take users second selection and match to the corresponding object
 // take users third selection and match to the corresponding object
-// when all selections match, add class of specific image to the page and append "camera name" and f ilm type" that user selected below it
+// when all selections match, add class of specific image to the page and append "camera name" and film type" that user selected below it
 
 
 //STRETCH GOALS
@@ -168,7 +168,7 @@ const filmPhoto = {
     ]
 }
 
-// const $form = $('form');
+
 
 
 $(function(){
@@ -214,22 +214,17 @@ $(function(){
             if (usersFilmPick === userSelection.film && usersSubjectPick === userSelection.subject) {
 
                 //  userSelections.push(cameraTypes[i]);
-                console.log(userSelection);
+                // console.log(userSelection);
 
+                $('.dynamicHeading').append(`<h2>Welcome to the club</h2>
+                <p>This is your photo!</p>`);
 
-                $(userSelection.photo).removeClass('test');
-                
-               
-
-                 $('section').append(`<p>Shot on a(n) ${usersCameraPick} camera using ${userSelection.film} film </p>`);
+                $(userSelection.photo).removeClass('hide');
+            
+                $('.dynamicText').append(`<p>Shot on a(n) ${usersCameraPick} camera using ${userSelection.film} film. </p>`);
             }
         }
 
     });
-
-    // const userSelections = [];
-
-
-    
 
 });

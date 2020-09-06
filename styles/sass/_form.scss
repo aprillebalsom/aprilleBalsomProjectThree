@@ -1,6 +1,7 @@
 //FORM STYLES
 
 ul {
+    padding: 10px 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -9,7 +10,27 @@ ul {
 li {
     display: flex;
     flex-direction: column;
+    width: calc((100% / 3) - 30px);
 }
+
+.formSubmit {
+    padding: 30px 0 40px;  
+    
+    h2 {
+        font-size: 2rem;
+        font-style: italic;
+        font-weight: lighter;
+
+        .highlight {
+            font-size: 3rem;
+            font-weight: bold;
+            font-style: normal;
+
+            padding: 10px 0;
+        }
+    }
+}
+
 
 button {
     width: 50%;

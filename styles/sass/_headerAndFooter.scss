@@ -9,6 +9,10 @@ header {
 
 //FOOTER STYLES
 
-footer a {
-    color: $accentColor;
+footer {
+    font-size: 1.6rem;
+
+    a {
+        color: $accentColor;
+    }
 }
