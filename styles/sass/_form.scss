@@ -16,6 +16,24 @@ li {
     width: calc((100% / 3) - 30px);
 }
 
+label {
+    border: 1px solid $fontColor;
+    width: 70%;
+    align-self: center;
+    margin: 20px 0;
+    padding: 15px 0;
+
+    &:hover,
+    &:focus {
+        background-color: $buttonColor;
+    }
+}
+
+input {
+    visibility: hidden;
+    // TODO - check if this is correct
+}
+
 .formSubmit {
     padding: 30px 0 40px;  
     

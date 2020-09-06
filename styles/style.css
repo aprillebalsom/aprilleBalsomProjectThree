@@ -364,6 +364,24 @@ li {
   width: calc((100% / 3) - 30px);
 }
 
+label {
+  border: 1px solid #2f2d2b;
+  width: 70%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 20px 0;
+  padding: 15px 0;
+}
+
+label:hover, label:focus {
+  background-color: #f9f7f4;
+}
+
+input {
+  visibility: hidden;
+}
+
 .formSubmit {
   padding: 30px 0 40px;
 }
@@ -392,7 +410,6 @@ section {
 }
 
 .dynamicImages {
-  border: 1px solid #2f2d2b;
   padding: 20px;
 }
 
