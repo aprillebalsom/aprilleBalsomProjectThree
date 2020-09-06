@@ -27,117 +27,143 @@ const filmPhoto = {
     leica: [
         {
             film: 'fuji',
-            subject: 'landscape'
+            subject: 'landscape',
+            photo: 'leicaFujiLandscape'
         },
         {
             film: 'fuji',
-            subject: 'people'
+            subject: 'people',
+            photo: 'leciaFujiPeople'
         },
         {
             film: 'fuji',
             subject: 'surprise',
+            photo: 'leciaFujiSurprise'
         },
         {
             film: 'kodak',
-            subject: 'landscape'
+            subject: 'landscape',
+            photo: 'leciaKodakLandscape'
         },
         {
             film: 'kodak',
-            subject: 'people'
+            subject: 'people',
+            photo: 'leicaKodakPeople'
         },
         {
             film: 'kodak',
             subject: 'surprise',
-            photos: '.tester'
+            photo: 'leciaKodakSurprise'
+            
         },
         {
             film: 'ilford',
-            subject: 'landscape'
+            subject: 'landscape',
+            photo: 'leciaIlfordLandscape'
         },
         {
             film: 'ilford',
-            subject: 'people'
+            subject: 'people',
+            photo: 'leciaIlfordPeople'
         },
         {
             film: 'ilford',
-            subject: 'surprise'
+            subject: 'surprise',
+            photo: '#leciaIlfordSurprise'
         },
     ],
     olympus: [
         {
             film: 'fuji',
-            subject: 'landscape'
+            subject: 'landscape',
+            photo: 'olympusFujiLandscape'
         },
         {
             film: 'fuji',
-            subject: 'people'
+            subject: 'people',
+            photo: 'olympusFujiPeople'
         },
         {
             film: 'fuji',
             subject: 'surprise',
+            photo: 'olympusFujiSurprise'
         },
         {
             film: 'kodak',
-            subject: 'landscape'
+            subject: 'landscape',
+            photo: 'olympusKodakLandscape'
         },
         {
             film: 'kodak',
-            subject: 'people'
+            subject: 'people',
+            photo: 'olympusKodakPeople'
         },
         {
             film: 'kodak',
-            subject: 'surprise'
+            subject: 'surprise',
+            photo: '.olympusKodakSurprise'
         },
         {
             film: 'ilford',
-            subject: 'landscape'
+            subject: 'landscape',
+            photo: 'olympusIlfordLandscape'
         },
         {
             film: 'ilford',
-            subject: 'people'
+            subject: 'people',
+            photo: 'olympusIlfordPeople'
         },
         {
             film: 'ilford',
-            subject: 'surprise'
+            subject: 'surprise',
+            photo: 'olympusIlfordSurprise'
         }
     ],
     canon: [
         {
             film: 'fuji',
             subject: 'landscape',
-            photos: '.tester2'
+            photo: '#canonFujiLandscape'
         },
         {
             film: 'fuji',
-            subject: 'people'
+            subject: 'people',
+            photo: 'canonFujiPeople'
         },
         {
             film: 'fuji',
             subject: 'surprise',
+            photo: 'canonFujiSurprise'
         },
         {
             film: 'kodak',
-            subject: 'landscape'
+            subject: 'landscape',
+            photo: 'canonKodakLandscape'
         },
         {
             film: 'kodak',
-            subject: 'people'
+            subject: 'people',
+            photo: 'canonKodakPeople'
         },
         {
             film: 'kodak',
-            subject: 'surprise'
+            subject: 'surprise',
+            photo: 'canonKodakSurprise'
         },
         {
             film: 'ilford',
-            subject: 'landscape'
+            subject: 'landscape',
+            photo: 'canonIlfordLandscape'
         },
         {
             film: 'ilford',
-            subject: 'people'
+            subject: 'people',
+            photo: 'canonIlfordPeople'
         },
         {
             film: 'ilford',
-            subject: 'surprise'
+            subject: 'surprise',
+            photo: 'canonIlfordSurprise'
         }
     ]
 }
@@ -153,9 +179,7 @@ $(function(){
     // const filmOptions = $('input[name = film]').val();
     // const subjectOptions = $('input[name = subject]').val();
 
-    const usersCameraPick = $('input[name = camera]:checked').val();
-    const usersFilmPick = $('input[name = film]:checked').val();
-    const usersSubjectPick = $('input[name = subject]:checked').val();
+   
 
 
     //FORM ERROR HANDLING
@@ -172,35 +196,40 @@ $(function(){
         e.preventDefault();
         // console.log('yay');
 
+        const usersCameraPick = $('input[name = camera]:checked').val();
+        const usersFilmPick = $('input[name = film]:checked').val();
+        const usersSubjectPick = $('input[name = subject]:checked').val();
+
 
         // validateForm(cameraOptions);
         // validateForm(filmOptions);
         // validateForm(subjectOptions);
 
+        let cameraTypes = filmPhoto[usersCameraPick];
+        // console.log(cameraTypes);
+
+        for (let i = 0; i < cameraTypes.length; i++) {
+            // console.log(cameraTypes[i]);
+            const userSelection = cameraTypes[i];
+            if (usersFilmPick === userSelection.film && usersSubjectPick === userSelection.subject) {
+
+                //  userSelections.push(cameraTypes[i]);
+                console.log(userSelection);
+
+
+                $(userSelection.photo).removeClass('test');
+                
+               
+
+                 $('section').append(`<p>Shot on a(n) ${usersCameraPick} camera using ${userSelection.film} film </p>`);
+            }
+        }
+
     });
 
     // const userSelections = [];
 
-    const cameraTypes = filmPhoto[cameraPick];
-    // console.log(cameraTypes);
 
-    for (let i = 0; i < cameraTypes.length; i++) {
-        // console.log(cameraTypes[i]);
-        const userSelection = cameraTypes[i];
-        if (filmPick === userSelection.film && subjectPick === userSelection.subject) {
-
-            //  userSelections.push(cameraTypes[i]);
-            //  console.log(userSelections);
-
-
-            $('.tester').addClass('test');
-
-
-            $('section').append(`<p>Shot on a(n) ${cameraPick} camera using ${userSelection.film} film </p>`);
-
-
-
-        }
-    }
+    
 
 });

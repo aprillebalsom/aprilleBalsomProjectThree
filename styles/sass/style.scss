@@ -12,21 +12,22 @@ $buttonColor: rgb(249, 247, 244);
 //IMPORTING OF PARTIALS
 @import 'setup';
 @import 'general';
-@import 'headerAndFooter'; //add
+// @import 'headerAndFooter'; //add
 @import 'form'; 
-@import 'formResults' //add
+// @import 'formResults' //add
 
 
-
-// test
 header {
     img {
         width: 50%;
     }
 }
 
-
 .test {
-    font-size: 70px;
-
+    display: none;
 }
+
+
+
+
+

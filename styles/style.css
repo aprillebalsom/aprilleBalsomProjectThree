@@ -310,10 +310,19 @@ h2 {
   padding: 10px 0;
 }
 
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 header img {
   width: 50%;
 }
 
 .test {
-  font-size: 70px;
+  display: none;
 }
