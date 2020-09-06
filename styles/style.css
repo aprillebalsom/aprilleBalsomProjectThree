@@ -281,12 +281,12 @@ body {
   background-color: #eae3d9;
   color: #2f2d2b;
   border: 1px solid #2f2d2b;
-  margin: 20px;
   font-size: 2rem;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 5px;
+  margin: 20px;
 }
 
 header {
@@ -308,7 +308,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   padding: 10px 0;
 }
 
@@ -339,17 +339,18 @@ footer a {
   color: #a1a395;
 }
 
+legend h2 {
+  font-size: 2.5rem;
+}
+
 ul {
-  padding: 10px 0 40px;
+  padding: 20px 0 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 li {
@@ -367,17 +368,11 @@ li {
   padding: 30px 0 40px;
 }
 
-.formSubmit h2 {
+.formSubmit .highlight {
   font-size: 2rem;
   font-style: italic;
   font-weight: lighter;
-}
-
-.formSubmit h2 .highlight {
-  font-size: 3rem;
-  font-weight: bold;
-  font-style: normal;
-  padding: 10px 0;
+  padding-bottom: 15px;
 }
 
 button {
@@ -388,9 +383,21 @@ button:hover, button:focus {
   background-color: #f9f7f4;
 }
 
+section {
+  padding: 20px 0;
+}
+
+.dynamicHeading {
+  padding-bottom: 80px;
+}
+
 .dynamicImages {
   border: 1px solid #2f2d2b;
   padding: 20px;
+}
+
+.dynamicText {
+  padding-top: 40px;
 }
 
 .hide {

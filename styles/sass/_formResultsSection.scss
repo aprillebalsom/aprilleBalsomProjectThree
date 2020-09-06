@@ -1,8 +1,22 @@
 //RESULTS SECTION STYLES
+section {
+    padding: 20px 0;
+}
+
+.dynamicHeading {
+    padding-bottom: 80px;
+
+}
 .dynamicImages {
     border: 1px solid $fontColor;
+
     padding: 20px;
 }
+
+.dynamicText {
+    padding-top: 40px;
+}
+
 .hide {
     display: none;
 }
