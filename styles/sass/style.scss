@@ -12,6 +12,10 @@ $buttonColor: rgb(249, 247, 244);
 //IMPORTING OF PARTIALS
 @import 'setup';
 @import 'general';
+@import 'headerAndFooter'; //add
+@import 'form'; 
+@import 'formResults' //add
+
 
 
 // test

@@ -47,7 +47,8 @@ const filmPhoto = {
         },
         {
             film: 'kodak',
-            subject: 'surprise'
+            subject: 'surprise',
+            photos: '.tester'
         },
         {
             film: 'ilford',
@@ -103,7 +104,8 @@ const filmPhoto = {
     canon: [
         {
             film: 'fuji',
-            subject: 'landscape'
+            subject: 'landscape',
+            photos: '.tester2'
         },
         {
             film: 'fuji',
@@ -140,54 +142,65 @@ const filmPhoto = {
     ]
 }
 
+// const $form = $('form');
+
 
 $(function(){
 
-    
 
+    
+    // const cameraOptions = $('input[name = camera]').val();
+    // const filmOptions = $('input[name = film]').val();
+    // const subjectOptions = $('input[name = subject]').val();
+
+    const usersCameraPick = $('input[name = camera]:checked').val();
+    const usersFilmPick = $('input[name = film]:checked').val();
+    const usersSubjectPick = $('input[name = subject]:checked').val();
+
+
+    //FORM ERROR HANDLING
+    // function validateForm(option, selection) {
+    //     if (option !== selection) {
+    //         console.log('check');
+    //         alert(`oops! looks like your missing ${option}, please fill it out + try again!`)
+    //     } 
+    // }
+
+
+    // FORM EVENT LISTENER
     $('form').on('submit', function(e) {
         e.preventDefault();
         // console.log('yay');
 
-        const cameraPick = $('input[name = camera]:checked').val();
-        // console.log('camera');
-        const filmPick = $('input[name = film]:checked').val();
-        // console.log('film');
-        const subjectPick = $('input[name = subject]:checked').val();
-        // console.log('subject');
 
-        // if ($('input[type = radio]') !== $('input[type = radio]:checked')) {
-        //     alert('oops! looks like your missing some required fields, please fill out all sections and try again!')
-        // }
+        // validateForm(cameraOptions);
+        // validateForm(filmOptions);
+        // validateForm(subjectOptions);
 
+    });
 
-        // const userSelections = [];
+    // const userSelections = [];
 
-        const cameraTypes = filmPhoto[cameraPick];
-        // console.log(cameraTypes);
+    const cameraTypes = filmPhoto[cameraPick];
+    // console.log(cameraTypes);
 
-        for (let i = 0; i < cameraTypes.length; i++) {
-            // console.log(cameraTypes[i]);
-            const userSelection = cameraTypes[i];
-            if (filmPick === userSelection.film && subjectPick === userSelection.subject) {
-        
+    for (let i = 0; i < cameraTypes.length; i++) {
+        // console.log(cameraTypes[i]);
+        const userSelection = cameraTypes[i];
+        if (filmPick === userSelection.film && subjectPick === userSelection.subject) {
+
             //  userSelections.push(cameraTypes[i]);
             //  console.log(userSelections);
 
-                
-                $('.tester').addClass('test');
+
+            $('.tester').addClass('test');
 
 
-                $('section').append(`<p>Shot on a(n) ${cameraPick} camera using ${userSelection.film} film </p>`);
+            $('section').append(`<p>Shot on a(n) ${cameraPick} camera using ${userSelection.film} film </p>`);
 
 
-                
-            }
+
         }
-
-      
-
-
-    });
+    }
 
 });
