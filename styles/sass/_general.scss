@@ -3,12 +3,6 @@ html {
     font-size: 62.5%;
 }
 
-.wrapper {
-    max-width: 1220px;
-    width: 85%;
-    margin: 0 auto;
-}
-
 body {
     background-color: $backgroundColor;
     color: $fontColor;
@@ -19,6 +13,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 header {
@@ -42,3 +37,16 @@ h1 {
 h2 {
     padding: 10px 0;
 }
+
+p {
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.wrapper {
+    max-width: 1220px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+

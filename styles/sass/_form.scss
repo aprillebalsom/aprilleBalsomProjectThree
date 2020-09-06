@@ -3,4 +3,22 @@
 ul {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 }
+
+li {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 50%;
+    &:hover,
+    &:focus {
+        background-color: $buttonColor;
+        // TODO fix 
+    }
+}
+
+
+

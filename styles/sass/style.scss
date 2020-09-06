@@ -1,31 +1,19 @@
 //DECLARING VARIABLES
 $backgroundColor: rgb(234, 227, 217);
-$fontColor:  #2f2d2b;
+$fontColor:  rgb(47, 45, 43);
 // rgba(0, 0, 0, .75); 
 $accentColor: rgb(161, 163, 149);
 $SecondaryAccentColor: rgba(161, 163, 149, .75);
 // add opacity of .70 to everything but a tags
 $buttonColor: rgb(249, 247, 244);
 
-
-
 //IMPORTING OF PARTIALS
 @import 'setup';
 @import 'general';
-// @import 'headerAndFooter'; //add
+@import 'headerAndFooter'; 
 @import 'form'; 
-// @import 'formResults' //add
+@import 'formResultsSection';
 
-
-header {
-    img {
-        width: 50%;
-    }
-}
-
-.test {
-    display: none;
-}
 
 
 
