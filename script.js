@@ -216,7 +216,6 @@ $(function(){
         e.preventDefault();
 
         let cameraTypes = filmPhoto[usersCameraPick];
-      
         for (let i = 0; i < cameraTypes.length; i++) {
            
             const userSelection = cameraTypes[i];
@@ -238,9 +237,19 @@ $(function(){
 
     });
 
-    $('#filterThree').on('click', function () {
-        $('.grain').toggle();
+    // $('#filterOne').on('click', function () {
+    //     $('.grain').toggle();
+    // });
+
+    $('#filterTwo').on('click', function () {
+        $('.doubleExposure').toggle();
     });
+
+    // $('#filterThree').on('click', function () {
+    //     $('.lightLeak').toggle();
+    // });
+
+    
 
 });
 

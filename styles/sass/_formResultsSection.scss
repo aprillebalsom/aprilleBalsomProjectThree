@@ -23,6 +23,20 @@ section {
     padding: 20px;
 }
 
+.main {
+    position: relative;
+}
+
+.grain, 
+.lightLeak,
+.doubleExposure {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .dynamicText {
     padding-top: 40px;
 }
@@ -37,7 +51,7 @@ section {
         font-family: 'Open Sans', sans-serif;
         text-transform: uppercase;
         letter-spacing: 5px;
-        
+
         padding: 20px 5px;
         margin: 20px 0;
         width: 100%;
@@ -45,6 +59,8 @@ section {
      
     } 
 }
+
+
 
 
 .hide {
