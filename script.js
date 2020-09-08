@@ -214,26 +214,21 @@ $(function(){
     // FORM EVENT LISTENER
     $('form').on('submit', function(e) {
         e.preventDefault();
-        // console.log('yay');
-    
 
         let cameraTypes = filmPhoto[usersCameraPick];
-        // console.log(cameraTypes);
-
-       
-
+      
         for (let i = 0; i < cameraTypes.length; i++) {
-            // console.log(cameraTypes[i]);
+           
             const userSelection = cameraTypes[i];
-            if (usersFilmPick === userSelection.film && usersSubjectPick === userSelection.subject) {
 
-                //  userSelections.push(cameraTypes[i]);
-                // console.log(userSelection);
+            if (usersFilmPick === userSelection.film && usersSubjectPick === userSelection.subject) {
 
                 $('.dynamicHeading').append(`<h2>Welcome to the club</h2>
                 <p>This is your photo!</p>`);
 
                 $(userSelection.photoId).removeClass('hide').css({border: '1px solid black', padding: '25px'});
+
+                $('.dynamicFilters').removeClass('hide');
             
                 $('.dynamicText').append(`<p>Shot on a(n) ${usersCameraPick} camera using ${userSelection.film} film. </p>`);
             }
@@ -241,6 +236,10 @@ $(function(){
 
       scrollDown();
 
+    });
+
+    $('#filterThree').on('click', function () {
+        $('.grain').toggle();
     });
 
 });

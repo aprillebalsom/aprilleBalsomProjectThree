@@ -1,12 +1,24 @@
 //RESULTS SECTION STYLES
 section {
     padding: 20px 0;
+
 }
 
 .dynamicHeading {
     padding-bottom: 80px;
 
 }
+
+.dynamicFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dynamicImageAndText {
+    width: calc(80% - 10px);
+}
+
 .dynamicImages {
     padding: 20px;
 }
@@ -14,6 +26,26 @@ section {
 .dynamicText {
     padding-top: 40px;
 }
+
+.dynamicFilters {
+    width: calc(20% - 10px);
+
+    button {
+        border: 1px solid $fontColor;
+        color: $fontColor;
+
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        
+        padding: 20px 5px;
+        margin: 20px 0;
+        width: 100%;
+
+     
+    } 
+}
+
 
 .hide {
     display: none;

@@ -35,10 +35,10 @@ label {
     background-color: $buttonColor;
 }
 
-input {
-    visibility: hidden;
+// input {
+    // visibility: hidden;
     // TODO - check if this is correct
-}
+// }
 
 
 .formSubmit {
@@ -57,12 +57,30 @@ input {
 
 button {
     width: 50%;
-    &:hover,
-    &:focus {
-        background-color: $buttonColor;
-        // TODO fix 
-    }
+    // position: relative;
+    
+    // .main {
+    //     &:hover,
+    //     &:focus {
+    //         opacity: 0;
+    //     }
+    // }
+
+    // .overlay {
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // opacity: 0;
+    //     &:hover,
+    //     &:focus {
+    //         opacity: 1;
+    //     }
+    // }
 }
+
+
 
 
 

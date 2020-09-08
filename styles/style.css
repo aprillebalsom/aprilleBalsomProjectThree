@@ -382,10 +382,6 @@ label:hover, label:focus {
   background-color: #f9f7f4;
 }
 
-input {
-  visibility: hidden;
-}
-
 .formSubmit {
   padding: 30px 0 40px;
 }
@@ -401,10 +397,6 @@ button {
   width: 50%;
 }
 
-button:hover, button:focus {
-  background-color: #f9f7f4;
-}
-
 section {
   padding: 20px 0;
 }
@@ -413,12 +405,43 @@ section {
   padding-bottom: 80px;
 }
 
+.dynamicFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dynamicImageAndText {
+  width: calc(80% - 10px);
+}
+
 .dynamicImages {
   padding: 20px;
 }
 
 .dynamicText {
   padding-top: 40px;
+}
+
+.dynamicFilters {
+  width: calc(20% - 10px);
+}
+
+.dynamicFilters button {
+  border: 1px solid #2f2d2b;
+  color: #2f2d2b;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 20px 5px;
+  margin: 20px 0;
+  width: 100%;
 }
 
 .hide {
