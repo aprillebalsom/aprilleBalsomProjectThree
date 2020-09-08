@@ -28,6 +28,10 @@ label {
     }
 }
 
+.selected {
+    background-color: $buttonColor;
+}
+
 input {
     visibility: hidden;
     // TODO - check if this is correct

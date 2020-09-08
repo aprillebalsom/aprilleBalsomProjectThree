@@ -22,6 +22,7 @@
 //THREE
 // allow user to "take another photo" by removing all selections and scrolling back to the top 
 
+const ccApp = {};
 
 const filmPhoto = {
     leica: [
@@ -168,45 +169,58 @@ const filmPhoto = {
     ]
 }
 
+const usersCameraPick = $('input[name = camera]:checked').val();
+const usersFilmPick = $('input[name = film]:checked').val();
+const usersSubjectPick = $('input[name = subject]:checked').val();
+
+const buttonHighlight = function () {
+    $('label').on('click', function () {
+        $(this).toggleClass('selected');
+    });
+
+};
+
+const scrollDown = function(){
+    $('html, body').animate({
+        scrollTop: $('section').offset().top
+    }, 1000)
+};
 
 
 
 $(function(){
 
 
-    
-    // const cameraOptions = $('input[name = camera]').val();
-    // const filmOptions = $('input[name = film]').val();
-    // const subjectOptions = $('input[name = subject]').val();
-
-   
-
-
     //FORM ERROR HANDLING
-    function validateForm(option, selection) {
-        if (option !== selection) {
-            console.log('check');
-            alert(`oops! looks like your missing ${option}, please fill it out + try again!`)
-        } 
-    }
+    // function validateForm(option, selection) {
+    //     if (option !== selection) {
+    //         console.log('check');
+    //         alert(`oops! looks like your missing ${option}, please fill it out + try again!`)
+    //     } 
+    // }
+
+
+
+
+  
+
+    // button highlight
+    buttonHighlight();
+
+    //if another label with the same input name is clicked, remove class of selected from other labels
+
 
 
     // FORM EVENT LISTENER
     $('form').on('submit', function(e) {
         e.preventDefault();
         // console.log('yay');
-
-        const usersCameraPick = $('input[name = camera]:checked').val();
-        const usersFilmPick = $('input[name = film]:checked').val();
-        const usersSubjectPick = $('input[name = subject]:checked').val();
-
-
-        // validateForm(cameraOptions);
-        // validateForm(filmOptions);
-        // validateForm(subjectOptions);
+    
 
         let cameraTypes = filmPhoto[usersCameraPick];
         // console.log(cameraTypes);
+
+       
 
         for (let i = 0; i < cameraTypes.length; i++) {
             // console.log(cameraTypes[i]);
@@ -225,12 +239,19 @@ $(function(){
             }
         }
 
-        $('html, body').animate({
-            scrollTop: $('section').offset().top
-        }, 1000)
+      scrollDown();
 
-
-       
     });
 
 });
+
+
+
+//need to empty section at some point
+//$('section').empty();
+
+
+
+
+
+

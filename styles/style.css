@@ -378,6 +378,10 @@ label:hover, label:focus {
   background-color: #f9f7f4;
 }
 
+.selected {
+  background-color: #f9f7f4;
+}
+
 input {
   visibility: hidden;
 }
