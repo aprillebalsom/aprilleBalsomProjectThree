@@ -183,12 +183,12 @@ $(function(){
 
 
     //FORM ERROR HANDLING
-    // function validateForm(option, selection) {
-    //     if (option !== selection) {
-    //         console.log('check');
-    //         alert(`oops! looks like your missing ${option}, please fill it out + try again!`)
-    //     } 
-    // }
+    function validateForm(option, selection) {
+        if (option !== selection) {
+            console.log('check');
+            alert(`oops! looks like your missing ${option}, please fill it out + try again!`)
+        } 
+    }
 
 
     // FORM EVENT LISTENER

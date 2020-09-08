@@ -1,1 +1,32 @@
-<svg height='100px' width='100px'  fill="#2f2d2b" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 164 164" version="1.1" x="0px" y="0px"><title>olympus-mju</title><desc>Created with Sketch.</desc><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g stroke="#2f2d2b"><path d="M93.5,64.5 C93.5,64.5 104.861267,66.1238877 117,68.7065969 C129.138733,71.2893061 140.5,74.5 140.5,74.5 M140.71693,92.5815043 C140.71693,92.5815043 128.464482,95.7927327 121.986721,97.1349158 C115.508961,98.477099 102.5,100.5 102.5,100.5 L102.5,100.5" stroke-width="1.5" stroke-linecap="square"></path><path d="M31.5,58.5 C31.5,58.5 37.1420638,58.6915941 44.2683585,59.7096362 C51.3946531,60.7276782 58.5058229,62.3579747 58.5058229,62.3579747 M68.5,101.5 C68.5,101.5 59.5255911,103.672031 50.4995093,105.13572 C41.4734276,106.599409 31.5,107.5 31.5,107.5 L31.5,107.5" stroke-width="1.5" stroke-linecap="square"></path><path d="M31.7563685,54.9621175 C32.0513108,52.7739004 34.0801207,51.0696549 36.2936612,51.155805 L129.044499,54.7656316 C132.903954,54.9158401 136.901179,58.0566416 137.969695,61.7708815 L138.823572,64.7390202 C141.724909,74.8242809 141.728554,91.1823498 138.834855,101.264839 L137.964574,104.297151 C136.897608,108.014773 132.899597,111.088042 129.024223,111.161689 L36.2936612,112.923923 C34.082726,112.965939 32.0373348,111.230677 31.723517,109.036675 L29.1212045,90.8430611 C28.4953412,86.467447 28.4669238,79.3669521 29.0570288,74.9888838 L31.7563685,54.9621175 Z" stroke-width="2.5"></path><circle stroke-width="2.5" cx="96" cy="86" r="13"></circle><circle stroke-width="1.5" cx="96" cy="86" r="8"></circle><path d="M78.5,86 L82.5,86" stroke-width="2.5" stroke-linecap="square"></path><path d="M86.5,53.5 C86.5,53.5 90.3337117,65.5918613 99.8633692,71.2878702 C107.787034,76.0239551 108.864275,80.0015618 109.272235,82.0225444 C109.615564,83.3725448 111.526231,90.063873 104.513365,97.5886441 C97.4605608,105.156269 96.0110661,112.177288 96.0110661,112.177288" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"></path><path d="M54.5,53.5 C54.5,53.5 58.3337117,65.5918613 67.8633692,71.2878702 C75.5535675,75.8844087 76.9013061,80.187105 77.2837268,82.0823258 C77.6083585,83.589205 79.4312911,90.1657428 72.5133651,97.5886441 C65.4605608,105.156269 64.0110661,112.177288 64.0110661,112.177288" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="bevel"></path><rect stroke-width="1.5" x="68" y="52.75" width="16" height="8" rx="3"></rect></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#2F2D2B;stroke-width:1.2943;stroke-linecap:square;stroke-miterlimit:2.439;}
+	.st1{fill:none;stroke:#2F2D2B;stroke-width:2.157;stroke-miterlimit:2.439;}
+	.st2{fill:none;stroke:#2F2D2B;stroke-width:1.2943;stroke-miterlimit:2.439;}
+	.st3{fill:none;stroke:#2F2D2B;stroke-width:2.157;stroke-linecap:square;stroke-miterlimit:2.439;}
+	.st4{fill:none;stroke:#2F2D2B;stroke-width:1.7256;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:2.439;}
+	.st5{fill:none;stroke:#2F2D2B;stroke-width:2.157;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:2.439;}
+</style>
+<desc>Created with Sketch.</desc>
+<g>
+	<g>
+		<path class="st0" d="M57.4,40.8c0,0,9.8,1.4,20.2,3.6c10.4,2.3,20.2,5,20.2,5 M98.2,65.1c0,0-10.5,2.8-16.1,3.9
+			c-5.6,1.1-16.8,2.9-16.8,2.9l0,0"/>
+		<path class="st0" d="M4,35.7c0,0,4.9,0.2,11.1,1c6.2,0.8,12.2,2.3,12.2,2.3 M35.9,72.7c0,0-7.7,1.9-15.5,3.1S4,77.9,4,77.9l0,0"/>
+		<path class="st1" d="M4.2,32.7c0.2-1.9,2-3.4,3.9-3.3l80,3.1c3.3,0.1,6.8,2.8,7.7,6.1l0.7,2.6c2.5,8.7,2.5,22.8,0,31.5l-0.7,2.6
+			c-0.9,3.2-4.3,5.9-7.7,5.9l-80,1.5c-1.9,0-3.7-1.4-3.9-3.3L1.9,63.5c-0.5-3.8-0.5-9.9-0.1-13.6L4.2,32.7z"/>
+		<circle class="st1" cx="59.5" cy="59.4" r="11.3"/>
+		<circle class="st2" cx="59.5" cy="59.4" r="6.9"/>
+		<path class="st3" d="M44.5,59.4h3.4"/>
+		<path class="st4" d="M51.4,31.3c0,0,3.3,10.4,11.6,15.4c6.8,4.1,7.7,7.5,8.2,9.3c0.3,1.1,2,6.9-4.1,13.4
+			C60.9,75.9,59.7,82,59.7,82"/>
+		<path class="st5" d="M23.8,31.3c0,0,3.3,10.4,11.6,15.4c6.6,3.9,7.8,7.6,8.2,9.3c0.3,1.3,1.9,7-4.1,13.4
+			C33.3,75.9,32.1,82,32.1,82"/>
+		<path class="st2" d="M38,30.7h8.7c1.4,0,2.6,1.1,2.6,2.6V35c0,1.4-1.1,2.6-2.6,2.6H38c-1.4,0-2.6-1.1-2.6-2.6v-1.8
+			C35.4,31.8,36.6,30.7,38,30.7z"/>
+	</g>
+</g>
+</svg>
