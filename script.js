@@ -198,9 +198,6 @@ $(function(){
 
   
 
-    // button highlight
-    // buttonHighlight();
-
     //if another label with the same input name is clicked, remove class of selected from other labels
 
 
@@ -209,7 +206,7 @@ $(function(){
     $('form').on('submit', function(e) {
         e.preventDefault();
 
-        let cameraTypes = filmPhoto[usersCameraPick];
+        const cameraTypes = filmPhoto[usersCameraPick];
 
         for (let i = 0; i < cameraTypes.length; i++) {
            

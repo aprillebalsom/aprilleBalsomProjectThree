@@ -28,6 +28,7 @@ label {
 
     &:hover {
         background-color: $buttonColor;
+        color: $highlightedFontColor;
         letter-spacing: 8px;
     }
 }
@@ -45,6 +46,7 @@ input[type="radio"]:active + label {
 
 input[type="radio"]:focus + label {
     letter-spacing: 8px;
+    color: $highlightedFontColor;
 }
 
 
@@ -58,6 +60,17 @@ input[type="radio"]:focus + label {
         
         padding-bottom: 15px;
 
+    }
+}
+
+.formButton {
+    width: 45%;
+    transition: all .5s;
+
+    &:hover,
+    &:focus {
+        width: 46%;
+        opacity: .85;
     }
 }
 

@@ -379,6 +379,7 @@ label {
 
 label:hover {
   background-color: #f9f7f4;
+  color: rgba(47, 45, 43, 0.85);
   letter-spacing: 8px;
 }
 
@@ -395,6 +396,7 @@ input[type="radio"]:active + label {
 
 input[type="radio"]:focus + label {
   letter-spacing: 8px;
+  color: rgba(47, 45, 43, 0.85);
 }
 
 .formSubmit {
@@ -406,6 +408,17 @@ input[type="radio"]:focus + label {
   font-style: italic;
   font-weight: lighter;
   padding-bottom: 15px;
+}
+
+.formButton {
+  width: 45%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.formButton:hover, .formButton:focus {
+  width: 46%;
+  opacity: .85;
 }
 
 section {
