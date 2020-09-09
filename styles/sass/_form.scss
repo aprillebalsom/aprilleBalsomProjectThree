@@ -22,23 +22,30 @@ label {
     width: 70%;
     margin: 20px 0;
     padding: 15px 0;
-
+    position: relative;
     align-self: center;
-    
-    &:hover,
-    &:focus {
+    transition: all .3s;
+
+    &:hover {
         background-color: $buttonColor;
+        letter-spacing: 8px;
     }
 }
 
-.selected {
-    background-color: $buttonColor;
+[type="radio"] {
+    position: absolute;
+    opacity: 0;
 }
 
-// input {
-    // visibility: hidden;
-    // TODO - check if this is correct
-// }
+input[type="radio"]:checked + label,
+input[type="radio"]:focus + label,
+input[type="radio"]:active + label {
+     background-color: $buttonColor;
+}
+
+input[type="radio"]:focus + label {
+    letter-spacing: 8px;
+}
 
 
 .formSubmit {
@@ -55,8 +62,8 @@ label {
 }
 
 
-button {
-    width: 50%;
+// button {
+//     width: 50%;
     // position: relative;
     
     // .main {
@@ -78,7 +85,7 @@ button {
     //         opacity: 1;
     //     }
     // }
-}
+
 
 
 

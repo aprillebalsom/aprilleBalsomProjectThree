@@ -369,17 +369,32 @@ label {
   width: 70%;
   margin: 20px 0;
   padding: 15px 0;
+  position: relative;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
-label:hover, label:focus {
+label:hover {
+  background-color: #f9f7f4;
+  letter-spacing: 8px;
+}
+
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+input[type="radio"]:checked + label,
+input[type="radio"]:focus + label,
+input[type="radio"]:active + label {
   background-color: #f9f7f4;
 }
 
-.selected {
-  background-color: #f9f7f4;
+input[type="radio"]:focus + label {
+  letter-spacing: 8px;
 }
 
 .formSubmit {
@@ -391,10 +406,6 @@ label:hover, label:focus {
   font-style: italic;
   font-weight: lighter;
   padding-bottom: 15px;
-}
-
-button {
-  width: 50%;
 }
 
 section {
@@ -423,9 +434,6 @@ section {
 
 .dynamicImages {
   padding: 20px;
-}
-
-.main {
   position: relative;
 }
 
@@ -437,6 +445,7 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
+  display: none;
 }
 
 .dynamicText {

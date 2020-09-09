@@ -173,12 +173,6 @@ const usersCameraPick = $('input[name = camera]:checked').val();
 const usersFilmPick = $('input[name = film]:checked').val();
 const usersSubjectPick = $('input[name = subject]:checked').val();
 
-const buttonHighlight = function () {
-    $('label').on('click', function () {
-        $(this).toggleClass('selected');
-    });
-
-};
 
 const scrollDown = function(){
     $('html, body').animate({
@@ -205,7 +199,7 @@ $(function(){
   
 
     // button highlight
-    buttonHighlight();
+    // buttonHighlight();
 
     //if another label with the same input name is clicked, remove class of selected from other labels
 
@@ -216,6 +210,7 @@ $(function(){
         e.preventDefault();
 
         let cameraTypes = filmPhoto[usersCameraPick];
+
         for (let i = 0; i < cameraTypes.length; i++) {
            
             const userSelection = cameraTypes[i];
@@ -225,15 +220,21 @@ $(function(){
                 $('.dynamicHeading').append(`<h2>Welcome to the club</h2>
                 <p>This is your photo!</p>`);
 
-                $(userSelection.photoId).removeClass('hide').css({border: '1px solid black', padding: '25px'});
+                $(userSelection.photoId).removeClass('hide')
+                // .css({border: '1px solid black', padding: '25px'});
 
                 $('.dynamicFilters').removeClass('hide');
             
                 $('.dynamicText').append(`<p>Shot on a(n) ${usersCameraPick} camera using ${userSelection.film} film. </p>`);
+
             }
         }
 
       scrollDown();
+
+        $('#filterTwo').on('click', function () {
+            $('.doubleExposure').toggle();
+        });
 
     });
 
@@ -241,9 +242,7 @@ $(function(){
     //     $('.grain').toggle();
     // });
 
-    $('#filterTwo').on('click', function () {
-        $('.doubleExposure').toggle();
-    });
+   
 
     // $('#filterThree').on('click', function () {
     //     $('.lightLeak').toggle();

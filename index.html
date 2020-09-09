@@ -36,22 +36,25 @@
                         <li>
                             <img  src="./styles/assets/leica-camera.svg" alt="A Lecia film camera icon.">
 
-                            <label for="leica">Leica</label>
                             <input type="radio" id="leica" value="leica" name="camera">
+                            <label for="leica">Leica</label>
+                           
                         </li>
 
                         <li>
                             <img src="./styles/assets/olympus-camera.svg" alt="An Olympus film camera icon.">
 
-                            <label for="olympus">Olympus</label>
                             <input type="radio" id="olympus" value="olympus" name="camera">
+                            <label for="olympus">Olympus</label>
+                            
                         </li>
 
                         <li>
                             <img src="./styles/assets/canon-camera.svg" alt="A Canon film camera icon.">
 
-                            <label for="canon">Canon</label>
                             <input type="radio" id="canon" value="canon" name="camera">
+                            <label for="canon">Canon</label>
+                          
                         </li>
                     </ul>
 
@@ -68,8 +71,9 @@
                             <!-- TODO add in alt text -->
                             <img src="./styles/assets/kodak-film.svg" alt="">
                         
-                            <label for="kodak">Kodak</label>
                             <input type="radio" id="kodak" value="kodak" name="film">
+                            <label for="kodak">Kodak</label>
+                            
                             
                         </li>
 
@@ -77,16 +81,16 @@
                             <!-- TODO add in alt text -->
                             <img src="./styles/assets/fuji-film.svg" alt="">
 
-                            <label for="fuji">Fuji</label>
                             <input type="radio" id="fuji" value="fuji" name="film">
+                            <label for="fuji">Fuji</label>
                         </li>
 
                         <li>
                             <!-- TODO add in alt text -->
                             <img src="./styles/assets/ilford-film.svg" alt="">
 
-                            <label for="ilford">Ilford</label>
                             <input type="radio" id="ilford" value="ilford" name="film">
+                            <label for="ilford">Ilford</label>
                         </li>
                     </ul>
 
@@ -102,24 +106,24 @@
                             <!-- TODO add in alt text -->
                             <img src="./styles/assets/landscape-subject.svg" alt="">
 
-                            <label for="landscape">Landscape</label>
                             <input type="radio" id="landscape" value="landscape" name="subject">
+                            <label for="landscape">Landscape</label>
                         </li>
 
                         <li>
                             <!-- TODO add in alt text -->
                             <img src="./styles/assets/people-subject.svg" alt="">
 
-                            <label for="people">People</label>
                             <input type="radio" id="people" value="people" name="subject">
+                            <label for="people">People</label>
                         </li>
 
                         <li>
                             <!-- TODO add in alt text -->
                             <img src="./styles/assets/surprise-subject.svg" alt="">
 
-                            <label for="surprise">Suprise</label>
                             <input type="radio" id="surprise" value="surprise" name="subject">
+                            <label for="surprise">Suprise</label>
                         </li>
                     </ul>
 
@@ -149,7 +153,7 @@
 
                     <div class="dynamicImageAndText">
                         <div class="dynamicImages">
-                            
+                            <!-- TODO remove main class? -->
                             <img src="./styles/assets/leica-fuji-landscape.jpg" alt="A person on a beach overlooking the water." class="hide main" id="leicaFujiLandscape">
 
                             <img src="./styles/assets/leica-fuji-people.jpg" alt="A girl posing with a bouquet of flowers and one in her mouth in a field." class="hide main" id="leciaFujiPeople">
@@ -203,28 +207,31 @@
                             <img src="./styles/assets/canon-ilford-surprise.jpg" alt="An original photobooth from the 1970's, in Australia." class="hide main" id="canonIlfordSurprise">
 
                             <img src="./styles/assets/canon-ilford-landscape.jpg" alt="A large waterfall in Iceland." class="hide main" id="canonIlfordLandscape">
+
+                            <!-- vintage filter-->
+                            <div class="grain">
+                                <img src="">
+                                <!-- TODO add img -->
+                            </div>
+                            
+                            <!-- double exposure filter-->
+                            <!-- <div class="doubleExposure"> -->
+                                <img class="doubleExposure" src="./styles/assets/double-exposure.png">
+                            <!-- </div> -->
+                            
+                            <!-- light leak filter-->
+                            <div class="lightLeak">
+                                <img src="">
+                                <!-- TODO add img -->
+                            </div>
+                            
+                            <div class="dynamicText">
+                                <!-- appended text -->
+                            </div>
+
                         </div>
 
-                        <!-- vintage filter-->
-                        <div class="grain hide">
-                            <img src="">
-                            <!-- TODO add img -->
-                        </div>
-                        
-                        <!-- double exposure filter-->
-                        <div class="doubleExposure">
-                            <img src="./styles/assets/double-exposure.png">
-                        </div>
-                        
-                        <!-- light leak filter-->
-                        <div class="lightLeak hide">
-                            <img src="">
-                            <!-- TODO add img -->
-                        </div>
-
-                        <div class="dynamicText">
-                            <!-- appended text -->
-                        </div>
+            
                     </div>
 
                     <div class="dynamicFilters hide">

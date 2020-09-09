@@ -21,9 +21,6 @@ section {
 
 .dynamicImages {
     padding: 20px;
-}
-
-.main {
     position: relative;
 }
 
@@ -35,6 +32,9 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
+    display: none;
+    // padding: 25px;
+    // width: 93%;
 }
 
 .dynamicText {
