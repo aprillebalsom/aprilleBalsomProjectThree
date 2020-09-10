@@ -343,7 +343,7 @@ legend h2 {
   font-size: clamp(2rem, 3vw, 2.5rem);
 }
 
-ul {
+.optionContainer {
   padding: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,7 +353,7 @@ ul {
           justify-content: space-between;
 }
 
-li {
+.option {
   width: calc((100% / 3) - 30px);
   display: -webkit-box;
   display: -ms-flexbox;

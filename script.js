@@ -173,15 +173,15 @@ const filmPhoto = {
 const photoFilters = {
     grain: {
         link: './styles/assets/grain.png',
-        title: 'a grainy texture'
+        title: 'A grainy film texture filter.'
     },
     doubleExposure: {
         link: './styles/assets/double-exposure.png',
-        title: 'rocks and water from the blue lagoon in Iceland.'
+        title: 'A filter overlaying a secondary photo of rocks and water at the Blue Lagoon.'
     },
     lightLeak: {
         link: './styles/assets/light-leak.png',
-        title: 'a light leak filter'
+        title: 'A light leak filter displaying effects that happen to film when light is exposed.'
     } 
 }
 
