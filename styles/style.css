@@ -446,6 +446,10 @@ section {
   padding: 20px 0;
 }
 
+.hide {
+  display: none;
+}
+
 .dynamicHeading {
   padding-bottom: 80px;
 }
@@ -457,13 +461,13 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .dynamicImageAndText {
-  width: calc(65% - 10px);
+  width: calc(65% - 30px);
 }
 
 .dynamicImages {
@@ -500,10 +504,7 @@ section {
   z-index: -10;
 }
 
-.dynamicFilters {
-  width: calc(35% - 10px);
-}
-
+.newPhotoButton button,
 .dynamicFilters button {
   border: 1px solid #2f2d2b;
   color: #2f2d2b;
@@ -511,18 +512,28 @@ section {
   text-transform: uppercase;
   letter-spacing: 5px;
   padding: 20px 5px;
-  margin: 20px 0;
+  margin: 40px 0;
   width: 100%;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
-.dynamicFilters button:hover, .dynamicFilters button:focus {
+.newPhotoButton button:hover, .newPhotoButton button:focus,
+.dynamicFilters button:hover,
+.dynamicFilters button:focus {
   background-color: #f9f7f4;
   color: rgba(47, 45, 43, 0.85);
   letter-spacing: 6px;
 }
 
-.hide {
-  display: none;
+.dynamicFilters {
+  width: calc(35% - 30px);
+}
+
+.tape {
+  width: 30%;
+  position: absolute;
+  top: -3%;
+  left: 38%;
+  z-index: 10;
 }

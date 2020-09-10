@@ -1,7 +1,10 @@
 //RESULTS SECTION STYLES
 section {
     padding: 20px 0;
+}
 
+.hide {
+    display: none;
 }
 
 .dynamicHeading {
@@ -12,11 +15,11 @@ section {
 .dynamicFlex {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .dynamicImageAndText {
-    width: calc(65% - 10px);
+    width: calc(65% - 30px);
 }
 
 .dynamicImages {
@@ -59,9 +62,9 @@ section {
     }
 }
 
-.dynamicFilters {
-    width: calc(35% - 10px);
 
+.newPhotoButton,
+.dynamicFilters {
     button {
         border: 1px solid $fontColor;
         color: $fontColor;
@@ -71,7 +74,7 @@ section {
         letter-spacing: 5px;
 
         padding: 20px 5px;
-        margin: 20px 0;
+        margin: 40px 0;
         width: 100%;
 
         transition: all .3s;
@@ -84,14 +87,24 @@ section {
             letter-spacing: 6px;
         }
 
-
-     
     } 
+}
+// .newPhotoButton {
+//     margin: 20px 0; 
+// }
+
+.dynamicFilters {
+    // padding: 80px 0;
+    width: calc(35% - 30px);
 }
 
 
+.tape {
+    width: 30%;
+    
+    position: absolute;
+    top: -3%;
+    left: 38%;
+    z-index: 10;
 
-
-.hide {
-    display: none;
 }

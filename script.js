@@ -194,6 +194,12 @@ $(function(){
         }, 1000)
     };
 
+    const scrollUp = function (){
+        $('html, body').animate({
+            scrollTop: $('form').offset().top
+        }, 1000)
+    }
+
 
     //FORM ERROR HANDLING
     // const formSubmit = function(){
@@ -232,9 +238,16 @@ $(function(){
                     <p>This is your photo!</p>`
                 );
 
-                $(userSelection.photoId).removeClass('hide').css({border: '1px solid black', padding: '25px'});
+                const tape = {
+                    link: './styles/assets/tape.png',
+                    class: '.tape'
+                }
+
+                $(userSelection.photoId).removeClass('hide').css({border: '1px solid black', padding: '25px'})
+                $('.tape').removeClass('hide');
 
                 $('.dynamicFilters').removeClass('hide');
+                $('.newPhotoButton').removeClass('hide');
             
                 // TODO add in error handeling for an/a
                 $('.dynamicText').append(`
@@ -265,7 +278,14 @@ $(function(){
             $('.filterContainer').append(image); 
 
         }
-        
+    })
+
+    $('.newPhotoButton').on('click', function(){
+        $('section').empty();
+
+        //TODO add hide classes back to things
+
+        scrollUp();
 
     })
     
