@@ -180,7 +180,7 @@ const photoFilters = {
         title: 'rocks and water from the blue lagoon in Iceland.'
     },
     lightLeak: {
-        link: './styles/assets/double-exposure.png',
+        link: './styles/assets/light-leak.png',
         title: 'a light leak filter'
     } 
 }
@@ -252,13 +252,19 @@ $(function(){
         //grab the id of the button the user clicked on and store it in a variable
 
         const filterPick = $(this).attr('id');
+
+        if (filterPick === 'reset') {
+            $('.filterContainer').empty();
+        }
         
-        $('.filterContainer').empty();
+        // $('.filterContainer').empty();
         const selectedFilter = photoFilters[filterPick];
       
         const image = $('<img>').attr('src', selectedFilter.link).attr('alt', selectedFilter.title);
         
         $('.filterContainer').append(image);
+
+        
         
     })
 
