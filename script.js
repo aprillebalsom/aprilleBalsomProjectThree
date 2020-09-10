@@ -172,7 +172,7 @@ const filmPhoto = {
 
 const photoFilters = {
     grain: {
-        link: './styles/assets/double-exposure.png',
+        link: './styles/assets/grain.png',
         title: 'a grainy texture'
     },
     doubleExposure: {
@@ -255,41 +255,17 @@ $(function(){
 
         if (filterPick === 'reset') {
             $('.filterContainer').empty();
+        } else {
+        
+            const selectedFilter = photoFilters[filterPick];
+            const image = $('<img>').attr('src', selectedFilter.link).attr('alt', selectedFilter.title);
+            
+            $('.filterContainer').append(image); 
+
         }
         
-        // $('.filterContainer').empty();
-        const selectedFilter = photoFilters[filterPick];
-      
-        const image = $('<img>').attr('src', selectedFilter.link).attr('alt', selectedFilter.title);
-        
-        $('.filterContainer').append(image);
 
-        
-        
     })
-
-       
-
-
-
-
-
-    //PHOTO FILTERS
-    // $('#filterTwo').on('click', function () {
-    //     $('.doubleExposure').toggle();
-    // });
-
-
-    // $('#filterOne').on('click', function () {
-    //     $('.grain').toggle();
-    // });
-
-   
-
-    // $('#filterThree').on('click', function () {
-    //     $('.lightLeak').toggle();
-    // });
-
     
 
 });
