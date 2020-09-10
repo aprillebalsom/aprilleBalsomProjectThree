@@ -44,6 +44,10 @@ h2 {
     padding: 10px 0;
 }
 
+h3 {
+    font-size: clamp(2rem, 3vw, 3.2rem);
+}
+
 p {
     font-style: italic;
     font-weight: lighter;

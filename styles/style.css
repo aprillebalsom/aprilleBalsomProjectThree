@@ -312,6 +312,10 @@ h2 {
   padding: 10px 0;
 }
 
+h3 {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+}
+
 p {
   font-style: italic;
   font-weight: lighter;
@@ -478,6 +482,22 @@ section {
 
 .dynamicText {
   padding-top: 40px;
+}
+
+.dynamicText .special {
+  position: relative;
+}
+
+.dynamicText .special::after {
+  content: ' ';
+  background-color: rgba(161, 163, 149, 0.75);
+  width: 90%;
+  height: 40%;
+  display: inline-block;
+  position: absolute;
+  bottom: 5%;
+  left: -4%;
+  z-index: -10;
 }
 
 .dynamicFilters {

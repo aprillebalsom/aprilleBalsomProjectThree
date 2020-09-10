@@ -37,6 +37,26 @@ section {
 
 .dynamicText {
     padding-top: 40px;
+
+    .special {
+        position: relative;
+
+        &::after {
+            content: ' ';
+            background-color: $secondaryAccentColor;
+
+            width: 90%;
+            height: 40%;
+
+            display: inline-block;
+
+            position: absolute;
+            bottom: 5%;
+            left: -4%;
+            z-index: -10;
+        }
+    
+    }
 }
 
 .dynamicFilters {

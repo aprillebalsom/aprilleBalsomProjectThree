@@ -186,8 +186,6 @@ const photoFilters = {
 }
 
 
-
-
 $(function(){
 
     const scrollDown = function () {
@@ -228,14 +226,21 @@ $(function(){
 
             if (usersFilmPick === userSelection.film && usersSubjectPick === userSelection.subject) {
     
-                $('.dynamicHeading').append(`<h2>Welcome to the club</h2>
-                <p>This is your photo!</p>`);
+                $('.dynamicHeading').append(`
+
+                    <h2>Welcome to the club</h2>
+                    <p>This is your photo!</p>`
+                );
 
                 $(userSelection.photoId).removeClass('hide').css({border: '1px solid black', padding: '25px'});
 
                 $('.dynamicFilters').removeClass('hide');
             
-                $('.dynamicText').append(`<p>Shot on a(n) ${usersCameraPick} camera using ${userSelection.film} film. </p>`);
+                // TODO add in error handeling for an/a
+                $('.dynamicText').append(`
+
+                    <p>Shot on a <span class="special">${usersCameraPick}</span> camera using <span class="special">${userSelection.film}</span> film.</p>
+                `);
 
             }
         }
