@@ -213,9 +213,6 @@ $(function(){
     $('form').on('submit', function(e) {
         e.preventDefault();
 
-        // formSubmit();
-        
-
         const usersCameraPick = $('input[name = camera]:checked').val();
         const usersFilmPick = $('input[name = film]:checked').val();
         const usersSubjectPick = $('input[name = subject]:checked').val();
@@ -248,8 +245,8 @@ $(function(){
 
    
     $('.filter').on('click', function () {
-        // const selectedFilter = $(this).attr('id');
-        //grab the id of the button the user clicked on and store it in a variable
+       
+        $('.filterContainer').empty();
 
         const filterPick = $(this).attr('id');
 
@@ -270,10 +267,6 @@ $(function(){
 
 });
 
-
-
-//need to empty section at some point
-//$('section').empty();
 
 
 

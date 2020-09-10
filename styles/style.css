@@ -324,11 +324,11 @@ p {
 }
 
 header {
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 header img {
-  width: 50%;
+  width: 40%;
 }
 
 footer {
@@ -344,7 +344,7 @@ legend h2 {
 }
 
 ul {
-  padding: 20px 0 40px;
+  padding: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,13 +412,13 @@ input[type="radio"]:focus + label {
 
 .formButton {
   width: 45%;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .formButton:hover, .formButton:focus {
   width: 46%;
-  opacity: .85;
+  opacity: .80;
 }
 
 section {
@@ -442,7 +442,7 @@ section {
 }
 
 .dynamicImageAndText {
-  width: calc(80% - 10px);
+  width: calc(65% - 10px);
 }
 
 .dynamicImages {
@@ -464,7 +464,7 @@ section {
 }
 
 .dynamicFilters {
-  width: calc(20% - 10px);
+  width: calc(35% - 10px);
 }
 
 .dynamicFilters button {
@@ -476,6 +476,14 @@ section {
   padding: 20px 5px;
   margin: 20px 0;
   width: 100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.dynamicFilters button:hover, .dynamicFilters button:focus {
+  background-color: #f9f7f4;
+  color: rgba(47, 45, 43, 0.85);
+  letter-spacing: 6px;
 }
 
 .hide {

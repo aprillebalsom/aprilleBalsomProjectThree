@@ -16,17 +16,18 @@ section {
 }
 
 .dynamicImageAndText {
-    width: calc(80% - 10px);
+    width: calc(65% - 10px);
 }
 
 .dynamicImages {
-    // padding: 20px;
     position: relative;
 }
 
 .filterContainer {
     opacity: .5;
+    
     padding: 25px;
+
     position: absolute;
     top: 0;
     bottom: 0;
@@ -39,7 +40,7 @@ section {
 }
 
 .dynamicFilters {
-    width: calc(20% - 10px);
+    width: calc(35% - 10px);
 
     button {
         border: 1px solid $fontColor;
@@ -52,6 +53,17 @@ section {
         padding: 20px 5px;
         margin: 20px 0;
         width: 100%;
+
+        transition: all .3s;
+
+        &:hover,
+        &:focus {
+            background-color: $buttonColor;
+            color: $highlightedFontColor;
+
+            letter-spacing: 6px;
+        }
+
 
      
     } 
