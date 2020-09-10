@@ -22,7 +22,7 @@
 //THREE
 // allow user to "take another photo" by removing all selections and scrolling back to the top 
 
-const ccApp = {};
+
 
 const filmPhoto = {
     leica: [
@@ -169,56 +169,72 @@ const filmPhoto = {
     ]
 }
 
-const usersCameraPick = $('input[name = camera]:checked').val();
-const usersFilmPick = $('input[name = film]:checked').val();
-const usersSubjectPick = $('input[name = subject]:checked').val();
 
+const photoFilters = {
+    grain: {
+        link: './styles/assets/double-exposure.png',
+        title: 'a grainy texture'
+    },
+    doubleExposure: {
+        link: './styles/assets/double-exposure.png',
+        title: 'rocks and water from the blue lagoon in Iceland.'
+    },
+    lightLeak: {
+        link: './styles/assets/double-exposure.png',
+        title: 'a light leak filter'
+    } 
+}
 
-const scrollDown = function(){
-    $('html, body').animate({
-        scrollTop: $('section').offset().top
-    }, 1000)
-};
 
 
 
 $(function(){
 
+    const scrollDown = function () {
+        $('html, body').animate({
+            scrollTop: $('section').offset().top
+        }, 1000)
+    };
+
 
     //FORM ERROR HANDLING
-    // function validateForm(option, selection) {
-    //     if (option !== selection) {
+    // const formSubmit = function(){
+
+    //     if (($('#leica') != $('[type = "radio"]:checked')) && ($('#olympus') != $('[type = "radio"]:checked')) && ($('#canon') != $('[type = "radio"]:checked'))) {
     //         console.log('check');
-    //         alert(`oops! looks like your missing ${option}, please fill it out + try again!`)
+    //         alert(`oops! looks like your missing, please fill it out + try again!`)
     //     } 
+
     // }
-
-
-
-
-  
-
-    //if another label with the same input name is clicked, remove class of selected from other labels
-
-
+   
+    
 
     // FORM EVENT LISTENER
     $('form').on('submit', function(e) {
         e.preventDefault();
 
-        const cameraTypes = filmPhoto[usersCameraPick];
+        // formSubmit();
+        
 
-        for (let i = 0; i < cameraTypes.length; i++) {
+        const usersCameraPick = $('input[name = camera]:checked').val();
+        const usersFilmPick = $('input[name = film]:checked').val();
+        const usersSubjectPick = $('input[name = subject]:checked').val();
+
+        
+        const cameraChoice = filmPhoto[usersCameraPick];
+
+        for (let i = 0; i < cameraChoice.length; i++) {
            
-            const userSelection = cameraTypes[i];
+            const userSelection = cameraChoice[i];
+
+
 
             if (usersFilmPick === userSelection.film && usersSubjectPick === userSelection.subject) {
-
+    
                 $('.dynamicHeading').append(`<h2>Welcome to the club</h2>
                 <p>This is your photo!</p>`);
 
-                $(userSelection.photoId).removeClass('hide')
-                // .css({border: '1px solid black', padding: '25px'});
+                $(userSelection.photoId).removeClass('hide').css({border: '1px solid black', padding: '25px'});
 
                 $('.dynamicFilters').removeClass('hide');
             
@@ -228,12 +244,35 @@ $(function(){
         }
 
       scrollDown();
-
-        $('#filterTwo').on('click', function () {
-            $('.doubleExposure').toggle();
-        });
-
     });
+
+   
+    $('.filter').on('click', function () {
+        // const selectedFilter = $(this).attr('id');
+        //grab the id of the button the user clicked on and store it in a variable
+
+        const filterPick = $(this).attr('id');
+        
+        $('.filterContainer').empty();
+        const selectedFilter = photoFilters[filterPick];
+      
+        const image = $('<img>').attr('src', selectedFilter.link).attr('alt', selectedFilter.title);
+        
+        $('.filterContainer').append(image);
+        
+    })
+
+       
+
+
+
+
+
+    //PHOTO FILTERS
+    // $('#filterTwo').on('click', function () {
+    //     $('.doubleExposure').toggle();
+    // });
+
 
     // $('#filterOne').on('click', function () {
     //     $('.grain').toggle();

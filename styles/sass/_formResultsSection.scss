@@ -20,21 +20,18 @@ section {
 }
 
 .dynamicImages {
-    padding: 20px;
+    // padding: 20px;
     position: relative;
 }
 
-.grain, 
-.lightLeak,
-.doubleExposure {
+.filterContainer {
+    opacity: .6;
+    padding: 25px;
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
     right: 0;
-    display: none;
-    // padding: 25px;
-    // width: 93%;
+    left: 0;
 }
 
 .dynamicText {

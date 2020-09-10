@@ -32,11 +32,14 @@
                         <h2>Pick your Camera</h2>
                     </legend>
 
+
+                    <!-- TODO change list to divs -->
                     <ul>
                         <li>
                             <img  src="./styles/assets/leica-camera.svg" alt="A Lecia film camera icon.">
 
                             <input type="radio" id="leica" value="leica" name="camera">
+                            <!-- checked -->
                             <label for="leica">Leica</label>
                            
                         </li>
@@ -152,7 +155,9 @@
                 <div class="dynamicFlex">
 
                     <div class="dynamicImageAndText">
+
                         <div class="dynamicImages">
+                            
                             <!-- TODO remove main class? -->
                             <img src="./styles/assets/leica-fuji-landscape.jpg" alt="A person on a beach overlooking the water." class="hide main" id="leicaFujiLandscape">
 
@@ -207,37 +212,42 @@
                             <img src="./styles/assets/canon-ilford-surprise.jpg" alt="An original photobooth from the 1970's, in Australia." class="hide main" id="canonIlfordSurprise">
 
                             <img src="./styles/assets/canon-ilford-landscape.jpg" alt="A large waterfall in Iceland." class="hide main" id="canonIlfordLandscape">
+                            
+                            <div class="filterContainer">
 
-                            <!-- vintage filter-->
-                            <div class="grain">
-                                <img src="">
-                                <!-- TODO add img -->
-                            </div>
-                            
-                            <!-- double exposure filter-->
-                            <!-- <div class="doubleExposure"> -->
-                                <img class="doubleExposure" src="./styles/assets/double-exposure.png">
-                            <!-- </div> -->
-                            
-                            <!-- light leak filter-->
-                            <div class="lightLeak">
-                                <img src="">
-                                <!-- TODO add img -->
-                            </div>
-                            
-                            <div class="dynamicText">
-                                <!-- appended text -->
-                            </div>
+                                <!-- vintage filter
+                                <div class="grain">
+                                    <img src="">
+                                    TODO add img
+                                </div>
+                                
+                                double exposure filter
+                                <div class="doubleExposure">
+                                    <img class="doubleExposure" src="./styles/assets/double-exposure.png">
+                                </div>
+                                
+                                light leak filter
+                                <div class="lightLeak">
+                                    <img src="">
+                                    TODO add img
+                                </div> -->
 
+                            </div>
                         </div>
+                            
+                        <div class="dynamicText">
+                            <!-- appended text -->
+                        </div>
+
+                       
 
             
                     </div>
 
                     <div class="dynamicFilters hide">
-                        <button class="unclicked" id="filterOne">Grain</button>
-                        <button class="unclicked" id="filterTwo">Double exposure</button>
-                        <button class="unclicked" id="filterThree">Light leak</button>
+                        <button class="filter" id="grain">Grain</button>
+                        <button class="filter" id="doubleExposure">Double exposure</button>
+                        <button class="filter" id="lightLeak">Light leak</button>
                     </div>
 
                 </div>
