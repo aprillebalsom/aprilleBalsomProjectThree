@@ -281,7 +281,7 @@ body {
   background-color: #eae3d9;
   color: #2f2d2b;
   border: 1px solid #2f2d2b;
-  font-size: clamp(1.6rem, 1.46vw, 2rem);
+  font-size: clamp(1.6rem, 2vw, 2rem);
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   text-transform: uppercase;
@@ -303,7 +303,7 @@ footer {
 }
 
 h1 {
-  font-size: clamp(3rem, 3vw, 4rem);
+  font-size: clamp(3rem, 4vw, 4rem);
   padding: 10px;
 }
 
@@ -336,15 +336,28 @@ footer {
 }
 
 footer a {
-  color: #a1a395;
+  color: #777c5a;
 }
 
 legend h2 {
   font-size: clamp(2rem, 3vw, 2.5rem);
+  position: relative;
+}
+
+legend h2::before {
+  content: ' ';
+  background-color: rgba(161, 163, 149, 0.75);
+  width: 95%;
+  height: 39%;
+  display: inline-block;
+  position: absolute;
+  bottom: 5%;
+  left: -2%;
+  z-index: -10;
 }
 
 .optionContainer {
-  padding: 20px 0;
+  padding: 0 0 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -366,8 +379,8 @@ legend h2 {
 
 label {
   border: 1px solid #2f2d2b;
+  text-align: center;
   width: 70%;
-  margin: 20px 0;
   padding: 15px 0;
   position: relative;
   -ms-flex-item-align: center;
@@ -380,7 +393,11 @@ label {
 label:hover {
   background-color: #f9f7f4;
   color: rgba(47, 45, 43, 0.85);
-  letter-spacing: 8px;
+  letter-spacing: 6px;
+}
+
+.longName {
+  font-size: clamp(1.6rem, 2vw, 1.8rem);
 }
 
 [type="radio"] {
@@ -395,7 +412,7 @@ input[type="radio"]:active + label {
 }
 
 input[type="radio"]:focus + label {
-  letter-spacing: 8px;
+  letter-spacing: 6px;
   color: rgba(47, 45, 43, 0.85);
 }
 

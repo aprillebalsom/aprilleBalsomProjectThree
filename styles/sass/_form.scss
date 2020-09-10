@@ -1,10 +1,28 @@
 //FORM STYLES
 legend h2 {
     font-size: clamp(2rem, 3vw, 2.5rem);
+    position: relative;
+
+    &::before {
+        content: ' ';
+        background-color: $secondaryAccentColor;
+
+        width: 95%;
+        height: 39%;
+
+        display: inline-block;
+
+        position: absolute;
+        bottom: 5%;
+        left: -2%;
+        z-index: -10;
+    }
 }
 
+
+
 .optionContainer {
-    padding: 20px 0;
+    padding: 0 0 60px;
     display: flex;
     justify-content: space-between;
 }
@@ -21,8 +39,9 @@ legend h2 {
 label {
     border: 1px solid $fontColor;
 
+    text-align: center;
+
     width: 70%;
-    margin: 20px 0;
     padding: 15px 0;
     position: relative;
     align-self: center;
@@ -31,8 +50,12 @@ label {
     &:hover {
         background-color: $buttonColor;
         color: $highlightedFontColor;
-        letter-spacing: 8px;
+        letter-spacing: 6px;
     }
+}
+
+.longName {
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
 }
 
 [type="radio"] {
@@ -47,7 +70,7 @@ input[type="radio"]:active + label {
 }
 
 input[type="radio"]:focus + label {
-    letter-spacing: 8px;
+    letter-spacing: 6px;
     color: $highlightedFontColor;
 }
 
@@ -75,33 +98,6 @@ input[type="radio"]:focus + label {
         opacity: .80;
     }
 }
-
-
-// button {
-//     width: 50%;
-    // position: relative;
-    
-    // .main {
-    //     &:hover,
-    //     &:focus {
-    //         opacity: 0;
-    //     }
-    // }
-
-    // .overlay {
-    // position: absolute;
-    // top: 0;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
-    // opacity: 0;
-    //     &:hover,
-    //     &:focus {
-    //         opacity: 1;
-    //     }
-    // }
-
-
 
 
 
