@@ -282,10 +282,15 @@ $(function(){
 
     $('.newPhotoButton').on('click', function(){
         $('section').empty();
-
-        //TODO add hide classes back to things
-
         scrollUp();
+
+
+         //TODO add hide classes back to things
+        $(userSelection.photoId).addClass('hide')
+        $('.tape').addClass('hide');
+
+        $('.dynamicFilters').addClass('hide');
+        $('.newPhotoButton').addClass('hide');
 
     })
     

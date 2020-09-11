@@ -348,18 +348,6 @@ legend h2 {
   position: relative;
 }
 
-legend h2::before {
-  content: ' ';
-  background-color: rgba(161, 163, 149, 0.75);
-  width: 95%;
-  height: 39%;
-  display: inline-block;
-  position: absolute;
-  bottom: 5%;
-  left: -2%;
-  z-index: -10;
-}
-
 .optionContainer {
   padding: 0 0 60px;
   display: -webkit-box;
@@ -429,6 +417,23 @@ input[type="radio"]:focus + label {
   font-style: italic;
   font-weight: lighter;
   padding-bottom: 15px;
+}
+
+.formSubmit .highlight .test {
+  position: relative;
+}
+
+legend h2::before,
+.test::before {
+  content: ' ';
+  background-color: rgba(161, 163, 149, 0.75);
+  width: 95%;
+  height: 39%;
+  display: inline-block;
+  position: absolute;
+  bottom: 5%;
+  left: -2%;
+  z-index: -10;
 }
 
 .formButton {

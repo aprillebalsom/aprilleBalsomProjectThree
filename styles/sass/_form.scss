@@ -2,24 +2,7 @@
 legend h2 {
     font-size: clamp(2rem, 3vw, 2.5rem);
     position: relative;
-
-    &::before {
-        content: ' ';
-        background-color: $secondaryAccentColor;
-
-        width: 95%;
-        height: 39%;
-
-        display: inline-block;
-
-        position: absolute;
-        bottom: 5%;
-        left: -2%;
-        z-index: -10;
-    }
 }
-
-
 
 .optionContainer {
     padding: 0 0 60px;
@@ -72,7 +55,6 @@ input[type="radio"]:focus + label {
     color: $highlightedFontColor;
 }
 
-
 .formSubmit {
     padding: 30px 0 40px;  
     
@@ -82,9 +64,29 @@ input[type="radio"]:focus + label {
         font-weight: lighter;
         
         padding-bottom: 15px;
-
+       
+        .test {
+            position: relative;
+        }
     }
 }
+
+legend h2::before,
+.test::before {
+    content: ' ';
+    background-color: $secondaryAccentColor;
+
+    width: 95%;
+    height: 39%;
+
+    display: inline-block;
+
+    position: absolute;
+    bottom: 5%;
+    left: -2%;
+    z-index: -10;
+}
+
 
 .formButton {
     width: 45%;
