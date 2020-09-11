@@ -1,5 +1,18 @@
 //MEDIA QUERIES START HERE
 
+@media (max-width: 940px) {
+    label,
+    button {
+        letter-spacing: 3px;
+
+        &:hover,
+        &:focus {
+            letter-spacing: 3px;
+        }
+    }
+
+}
+
 @media (max-width: 768px) {
 
     header img {
@@ -21,15 +34,6 @@
         padding: 0;
     }
 
-    label,
-    button {
-        letter-spacing: 3px;
-
-        &:hover,
-        &:focus {
-            letter-spacing: 3px;
-        }
-    }
 
     button {
         margin: 20px 0;  
