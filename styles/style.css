@@ -537,10 +537,10 @@ section {
 }
 
 .tape {
-  width: 30%;
+  width: 35%;
   position: absolute;
-  top: -3%;
-  left: 38%;
+  top: -2%;
+  left: 33%;
   z-index: 10;
 }
 
