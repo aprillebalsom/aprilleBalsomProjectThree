@@ -63,38 +63,32 @@ section {
 }
 
 
-.newPhotoButton,
-.dynamicFilters {
-    button {
-        border: 1px solid $fontColor;
-        color: $fontColor;
+button {
+    border: 1px solid $fontColor;
+    color: $fontColor;
 
-        font-family: 'Open Sans', sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 5px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 
-        padding: 20px 5px;
-        margin: 40px 0;
-        width: 100%;
+    padding: 20px 5px;
+    margin: 40px 0;
+    width: 100%;
 
-        transition: all .3s;
+    transition: all .3s;
 
-        &:hover,
-        &:focus {
-            background-color: $buttonColor;
-            color: $highlightedFontColor;
+    &:hover,
+    &:focus {
+        background-color: $buttonColor;
+        color: $highlightedFontColor;
 
-            letter-spacing: 6px;
-        }
+        letter-spacing: 6px;
+    }
 
-    } 
-}
-// .newPhotoButton {
-//     margin: 20px 0; 
-// }
+} 
+
 
 .dynamicFilters {
-    // padding: 80px 0;
     width: calc(35% - 30px);
 }
 

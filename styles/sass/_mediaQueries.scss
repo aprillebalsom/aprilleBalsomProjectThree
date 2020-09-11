@@ -1,13 +1,9 @@
 //MEDIA QUERIES START HERE
 
-@media (max-width: 360px) {
-
-    body {
-        letter-spacing: 3px;
-    }
+@media (max-width: 768px) {
 
     header img {
-        width: 98%;
+        width: 70%;
     }
 
     main {
@@ -21,25 +17,51 @@
     }
 
     .option {
-        width: 80%;
-        padding: 10px 0;
+        width: 50%;
+        padding: 0;
     }
 
-    legend h2::before,
-    .accent::before {
-        display: none;
+    label,
+    button {
+        letter-spacing: 3px;
+
+        &:hover,
+        &:focus {
+            letter-spacing: 3px;
+        }
     }
 
-    label:hover {
-        letter-spacing:3px;
+    button {
+        margin: 20px 0;  
     }
 
-    input[type="radio"]:focus + label {
-    letter-spacing: 6px;
-    color: $highlightedFontColor;
+    .formButton{
+        width: 70%;
+
+        &:hover,
+        &:focus {
+            width: 72%;
+        }
+    }
+
 }
 
-    .formButton {
+@media (max-width: 560px) {
+
+    body {
+        letter-spacing: 3px;
+    }
+
+    header img {
+        width: 85%;
+    }
+
+    .option {
+        width: 80%;
+    }
+
+
+   .formButton{
         width: 90%;
 
         &:hover,
@@ -49,7 +71,6 @@
     }
 
     //DYNAMIC CONTENT
-
     .dynamicHeading {
         padding-bottom: 40px;
     }
@@ -66,32 +87,39 @@
     }
 
     .dynamicFilters {
-        order: -1;
-        width: 95%;
-
-        button {
-            margin: 15px 0;
-        }
-
+        width: 80%;
     }
-
-    .dynamicFilters,
-    .newPhotoButton {
-        button {
-            letter-spacing: 3px;
-
-            &:hover,
-            &:focus {
-                letter-spacing: 3px;
-            }
-        }
-    }
-
-
 
     footer {
         font-size: 1.2rem;
         text-align: left;
     }
 
+}
+
+@media (max-width: 420px) {
+
+    h1 span {
+        position: relative;
+
+        &::before {
+            content: '';
+            background-color: $secondaryAccentColor;
+
+            width: 95%;
+            height: 40%;
+
+            display: inline-block;
+
+            position: absolute;
+            bottom: 5%;
+            left: -2%;
+            z-index: -10;
+        }
+    }
+
+    legend h2::before,
+    .accent::before {
+        display: none;
+    }
 }

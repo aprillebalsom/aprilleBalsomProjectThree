@@ -281,7 +281,7 @@ body {
   background-color: #eae3d9;
   color: #2f2d2b;
   border: 1px solid #2f2d2b;
-  font-size: clamp(1.6rem, 2vw, 2rem);
+  font-size: clamp(1.6rem, 1.5vw, 2rem);
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   text-transform: uppercase;
@@ -372,7 +372,6 @@ legend h2 {
 
 label {
   border: 1px solid #2f2d2b;
-  text-align: center;
   width: 70%;
   padding: 15px 0;
   position: relative;
@@ -438,6 +437,7 @@ legend h2::before,
 }
 
 .formButton {
+  border: none;
   width: 45%;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -446,6 +446,7 @@ legend h2::before,
 .formButton:hover, .formButton:focus {
   width: 46%;
   opacity: .80;
+  background-color: #eae3d9;
 }
 
 section {
@@ -510,8 +511,7 @@ section {
   z-index: -10;
 }
 
-.newPhotoButton button,
-.dynamicFilters button {
+button {
   border: 1px solid #2f2d2b;
   color: #2f2d2b;
   font-family: 'Open Sans', sans-serif;
@@ -524,9 +524,7 @@ section {
   transition: all .3s;
 }
 
-.newPhotoButton button:hover, .newPhotoButton button:focus,
-.dynamicFilters button:hover,
-.dynamicFilters button:focus {
+button:hover, button:focus {
   background-color: #f9f7f4;
   color: rgba(47, 45, 43, 0.85);
   letter-spacing: 6px;
@@ -544,12 +542,9 @@ section {
   z-index: 10;
 }
 
-@media (max-width: 360px) {
-  body {
-    letter-spacing: 3px;
-  }
+@media (max-width: 768px) {
   header img {
-    width: 98%;
+    width: 70%;
   }
   main {
     padding-top: 10px;
@@ -567,19 +562,38 @@ section {
             align-items: center;
   }
   .option {
-    width: 80%;
-    padding: 10px 0;
+    width: 50%;
+    padding: 0;
   }
-  legend h2::before,
-  .accent::before {
-    display: none;
-  }
-  label:hover {
+  label,
+  button {
     letter-spacing: 3px;
   }
-  input[type="radio"]:focus + label {
-    letter-spacing: 6px;
-    color: rgba(47, 45, 43, 0.85);
+  label:hover, label:focus,
+  button:hover,
+  button:focus {
+    letter-spacing: 3px;
+  }
+  button {
+    margin: 20px 0;
+  }
+  .formButton {
+    width: 70%;
+  }
+  .formButton:hover, .formButton:focus {
+    width: 72%;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    letter-spacing: 3px;
+  }
+  header img {
+    width: 85%;
+  }
+  .option {
+    width: 80%;
   }
   .formButton {
     width: 90%;
@@ -607,25 +621,31 @@ section {
     width: 100%;
   }
   .dynamicFilters {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-    width: 95%;
-  }
-  .dynamicFilters button {
-    margin: 15px 0;
-  }
-  .dynamicFilters button,
-  .newPhotoButton button {
-    letter-spacing: 3px;
-  }
-  .dynamicFilters button:hover, .dynamicFilters button:focus,
-  .newPhotoButton button:hover,
-  .newPhotoButton button:focus {
-    letter-spacing: 3px;
+    width: 80%;
   }
   footer {
     font-size: 1.2rem;
     text-align: left;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 span {
+    position: relative;
+  }
+  h1 span::before {
+    content: '';
+    background-color: rgba(161, 163, 149, 0.75);
+    width: 95%;
+    height: 40%;
+    display: inline-block;
+    position: absolute;
+    bottom: 5%;
+    left: -2%;
+    z-index: -10;
+  }
+  legend h2::before,
+  .accent::before {
+    display: none;
   }
 }
