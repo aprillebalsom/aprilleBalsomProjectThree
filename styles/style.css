@@ -466,48 +466,46 @@ legend h2::before,
   right: -25%;
 }
 
-.arrow1::before {
-  content: '';
-  background-color: #777c5a;
-  width: 150px;
-  height: 3px;
-  display: inline-block;
-  position: absolute;
-  bottom: 43%;
-  left: -30%;
-}
-
-.arrow1::after {
-  content: '';
-  background-color: #777c5a;
-  width: 3px;
-  height: 20px;
-  display: inline-block;
-  position: absolute;
-  bottom: 43%;
-  left: -30%;
-}
-
-.arrow2::before {
-  content: '';
-  background-color: #777c5a;
-  width: 90px;
-  height: 3px;
-  display: inline-block;
-  position: absolute;
-  top: 22%;
-  right: -10%;
-}
-
+.arrow1::before,
+.arrow1::after,
+.arrow2::before,
 .arrow2::after {
   content: '';
   background-color: #777c5a;
-  width: 3px;
-  height: 18px;
   display: inline-block;
   position: absolute;
-  top: 17%;
+}
+
+.arrow1::before,
+.arrow1::after {
+  bottom: 43%;
+  left: -30%;
+}
+
+.arrow1::before {
+  width: 53%;
+  height: 1%;
+}
+
+.arrow1::after {
+  width: 1%;
+  height: 7%;
+}
+
+.arrow2::before,
+.arrow2::after {
+  bottom: 78%;
   right: -10%;
+}
+
+.arrow2::before {
+  width: 32%;
+  height: 1%;
+}
+
+.arrow2::after {
+  width: 1%;
+  height: 6%;
 }
 
 section {
@@ -642,10 +640,10 @@ button:hover, button:focus {
     margin: 20px 0;
   }
   .formButton {
-    width: 70%;
+    width: 50%;
   }
   .formButton:hover, .formButton:focus {
-    width: 72%;
+    width: 52%;
   }
 }
 
@@ -664,6 +662,13 @@ button:hover, button:focus {
   }
   .formButton:hover, .formButton:focus {
     width: 92%;
+  }
+  .formButton::before, .formButton::after {
+    display: none;
+  }
+  .arrow1,
+  .arrow2 {
+    display: none;
   }
   .dynamicHeading {
     padding-bottom: 40px;

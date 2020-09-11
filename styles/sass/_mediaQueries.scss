@@ -34,17 +34,16 @@
         padding: 0;
     }
 
-
     button {
         margin: 20px 0;  
     }
 
-    .formButton{
-        width: 70%;
+    .formButton {
+        width: 50%;
 
         &:hover,
         &:focus {
-            width: 72%;
+            width: 52%;
         }
     }
 
@@ -64,7 +63,6 @@
         width: 80%;
     }
 
-
    .formButton{
         width: 90%;
 
@@ -72,6 +70,16 @@
         &:focus {
             width: 92%;
         }
+
+        &::before,
+        &::after {
+            display: none;
+        }
+        
+    }
+    .arrow1,
+    .arrow2 {
+        display: none;
     }
 
     //DYNAMIC CONTENT

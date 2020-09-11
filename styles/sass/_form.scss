@@ -124,65 +124,49 @@ legend h2::before,
 
 }
 
-.arrow1::before {
-    content: '';
-
-    background-color: $accentColor;
-
-    width: 150px;
-    height: 3px;
-
-    display: inline-block;
-
-    position: absolute;
-    bottom: 43%;
-    left: -30%;
-}
-
-.arrow1::after {
-    content: '';
-
-    background-color: $accentColor;
-
-    width: 3px;
-    height: 20px;
-
-    display: inline-block;
-
-    position: absolute;
-    bottom: 43%;
-    left: -30%;
-
-}
-
-.arrow2::before {
-    content: '';
-
-    background-color: $accentColor;
-
-    width: 90px;
-    height: 3px;
-
-    display: inline-block;
-
-    position: absolute;
-    top: 22%;
-    right: -10%;
-}
-
+.arrow1::before,
+.arrow1::after ,
+.arrow2::before, 
 .arrow2::after {
     content: '';
 
     background-color: $accentColor;
 
-    width: 3px;
-    height: 18px;
-
     display: inline-block;
 
     position: absolute;
-    top: 17%;
+}
+
+.arrow1::before,
+.arrow1::after {
+    bottom: 43%;
+    left: -30%;
+}
+
+.arrow1::before {
+    width: 53%;
+    height: 1%;
+}
+
+.arrow1::after {
+    width: 1%;
+    height: 7%;
+}
+
+.arrow2::before,
+.arrow2::after {
+    bottom: 78%;
     right: -10%;
+}
+
+.arrow2::before {
+    width: 32%;
+    height: 1%;
+}
+
+.arrow2::after {
+    width: 1%;
+    height: 6%;
 }
 
 
