@@ -128,7 +128,7 @@ legend h2::before,
     content: '';
 
     background-color: $accentColor;
-    
+
     width: 150px;
     height: 3px;
 
@@ -153,6 +153,36 @@ legend h2::before,
     bottom: 43%;
     left: -30%;
 
+}
+
+.arrow2::before {
+    content: '';
+
+    background-color: $accentColor;
+
+    width: 90px;
+    height: 3px;
+
+    display: inline-block;
+
+    position: absolute;
+    top: 22%;
+    right: -10%;
+}
+
+.arrow2::after {
+    content: '';
+
+    background-color: $accentColor;
+
+    width: 3px;
+    height: 18px;
+
+    display: inline-block;
+
+    position: absolute;
+    top: 17%;
+    right: -10%;
 }
 
 

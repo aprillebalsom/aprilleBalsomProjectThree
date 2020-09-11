@@ -488,6 +488,28 @@ legend h2::before,
   left: -30%;
 }
 
+.arrow2::before {
+  content: '';
+  background-color: #777c5a;
+  width: 90px;
+  height: 3px;
+  display: inline-block;
+  position: absolute;
+  top: 22%;
+  right: -10%;
+}
+
+.arrow2::after {
+  content: '';
+  background-color: #777c5a;
+  width: 3px;
+  height: 18px;
+  display: inline-block;
+  position: absolute;
+  top: 17%;
+  right: -10%;
+}
+
 section {
   padding: 20px 0;
 }
