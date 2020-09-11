@@ -194,17 +194,19 @@ $(function(){
         }, 1000)
     };
 
-    const scrollUp = function (){
+    const scrollUp = function () {
         $('html, body').animate({
             scrollTop: $('form').offset().top
         }, 1000)
     }
 
 
+
+
     //FORM ERROR HANDLING
     // const formSubmit = function(){
 
-    //     if (($('#leica') != $('[type = "radio"]:checked')) && ($('#olympus') != $('[type = "radio"]:checked')) && ($('#canon') != $('[type = "radio"]:checked'))) {
+    //     if (($('input[name = camera]:checked') !== $('[type = "radio"]:checked')) && ($('#olympus') != $('[type = "radio"]:checked')) && ($('#canon') != $('[type = "radio"]:checked'))) {
     //         console.log('check');
     //         alert(`oops! looks like your missing, please fill it out + try again!`)
     //     } 
@@ -238,26 +240,29 @@ $(function(){
                     <p>This is your photo!</p>`
                 );
 
-                const tape = {
-                    link: './styles/assets/tape.png',
-                    class: '.tape'
-                }
 
                 $(userSelection.photoId).removeClass('hide').css({border: '1px solid black', padding: '25px'})
                 $('.tape').removeClass('hide');
 
                 $('.dynamicFilters').removeClass('hide');
                 $('.newPhotoButton').removeClass('hide');
-            
-                // TODO add in error handeling for an/a
-                $('.dynamicText').append(`
 
-                    <p>Shot on a <span class="special">${usersCameraPick}</span> camera using <span class="special">${userSelection.film}</span> film.</p>
+                const displayText = function () {
+                    let a = 'a'
+                    if (usersCameraPick === 'olympus') {
+                        a = 'an';
+                    }
+
+                    $('.dynamicText').append(`
+
+                    <p>Shot on ${a} <span class="special">${usersCameraPick}</span> camera using <span class="special">${userSelection.film}</span> film.</p>
                 `);
+                }
 
+                displayText();
+               
             }
         }
-
       scrollDown();
     });
 

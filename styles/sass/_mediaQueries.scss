@@ -1,0 +1,98 @@
+//MEDIA QUERIES START HERE
+
+@media (max-width: 360px) {
+
+    body {
+        letter-spacing: 3px;
+    }
+
+    header img {
+        width: 98%;
+    }
+
+    main {
+        padding-top: 10px;
+    }
+
+    .optionContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .option {
+        width: 80%;
+        padding: 10px 0;
+    }
+
+    legend h2::before,
+    .accent::before {
+        display: none;
+    }
+
+    label:hover {
+        letter-spacing:3px;
+    }
+
+    input[type="radio"]:focus + label {
+    letter-spacing: 6px;
+    color: $highlightedFontColor;
+}
+
+    .formButton {
+        width: 90%;
+
+        &:hover,
+        &:focus {
+            width: 92%;
+        }
+    }
+
+    //DYNAMIC CONTENT
+
+    .dynamicHeading {
+        padding-bottom: 40px;
+    }
+    
+    .dynamicFlex {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dynamicImageAndText {
+        padding-top: 20px;
+        width: 100%
+    }
+
+    .dynamicFilters {
+        order: -1;
+        width: 95%;
+
+        button {
+            margin: 15px 0;
+        }
+
+    }
+
+    .dynamicFilters,
+    .newPhotoButton {
+        button {
+            letter-spacing: 3px;
+
+            &:hover,
+            &:focus {
+                letter-spacing: 3px;
+            }
+        }
+    }
+
+
+
+
+    footer {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+}

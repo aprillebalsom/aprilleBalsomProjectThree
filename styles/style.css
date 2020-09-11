@@ -303,12 +303,12 @@ footer {
 }
 
 h1 {
-  font-size: clamp(3rem, 4vw, 4rem);
+  font-size: clamp(2.4rem, 4vw, 4rem);
   padding: 10px;
 }
 
 h2 {
-  font-size: clamp(2.3rem, 3vw, 3.5rem);
+  font-size: clamp(2rem, 3vw, 3.5rem);
   padding: 10px 0;
 }
 
@@ -344,7 +344,8 @@ footer a {
 }
 
 legend h2 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  text-align: left;
   position: relative;
 }
 
@@ -389,7 +390,7 @@ label:hover {
 }
 
 .longName {
-  font-size: clamp(1.6rem, 2vw, 1.8rem);
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
 }
 
 [type="radio"] {
@@ -419,12 +420,12 @@ input[type="radio"]:focus + label {
   padding-bottom: 15px;
 }
 
-.formSubmit .highlight .test {
+.formSubmit .highlight .accent {
   position: relative;
 }
 
 legend h2::before,
-.test::before {
+.accent::before {
   content: ' ';
   background-color: rgba(161, 163, 149, 0.75);
   width: 95%;
@@ -541,4 +542,90 @@ section {
   top: -3%;
   left: 38%;
   z-index: 10;
+}
+
+@media (max-width: 360px) {
+  body {
+    letter-spacing: 3px;
+  }
+  header img {
+    width: 98%;
+  }
+  main {
+    padding-top: 10px;
+  }
+  .optionContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .option {
+    width: 80%;
+    padding: 10px 0;
+  }
+  legend h2::before,
+  .accent::before {
+    display: none;
+  }
+  label:hover {
+    letter-spacing: 3px;
+  }
+  input[type="radio"]:focus + label {
+    letter-spacing: 6px;
+    color: rgba(47, 45, 43, 0.85);
+  }
+  .formButton {
+    width: 90%;
+  }
+  .formButton:hover, .formButton:focus {
+    width: 92%;
+  }
+  .dynamicHeading {
+    padding-bottom: 40px;
+  }
+  .dynamicFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dynamicImageAndText {
+    padding-top: 20px;
+    width: 100%;
+  }
+  .dynamicFilters {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    width: 95%;
+  }
+  .dynamicFilters button {
+    margin: 15px 0;
+  }
+  .dynamicFilters button,
+  .newPhotoButton button {
+    letter-spacing: 3px;
+  }
+  .dynamicFilters button:hover, .dynamicFilters button:focus,
+  .newPhotoButton button:hover,
+  .newPhotoButton button:focus {
+    letter-spacing: 3px;
+  }
+  footer {
+    font-size: 1.2rem;
+    text-align: left;
+  }
 }

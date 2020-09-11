@@ -1,6 +1,7 @@
 //FORM STYLES
 legend h2 {
-    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    text-align: left;
     position: relative;
 }
 
@@ -36,7 +37,7 @@ label {
 }
 
 .longName {
-    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
 }
 
 [type="radio"] {
@@ -65,14 +66,14 @@ input[type="radio"]:focus + label {
         
         padding-bottom: 15px;
        
-        .test {
+        .accent {
             position: relative;
         }
     }
 }
 
 legend h2::before,
-.test::before {
+.accent::before {
     content: ' ';
     background-color: $secondaryAccentColor;
 
