@@ -441,12 +441,51 @@ legend h2::before,
   width: 45%;
   -webkit-transition: all .2s;
   transition: all .2s;
+  position: relative;
 }
 
 .formButton:hover, .formButton:focus {
-  width: 46%;
-  opacity: .80;
   background-color: #eae3d9;
+  opacity: .80;
+  width: 46%;
+}
+
+.formButton::before, .formButton::after {
+  position: absolute;
+}
+
+.formButton::before {
+  content: 'viewfinder';
+  bottom: 50%;
+  left: -50%;
+}
+
+.formButton::after {
+  content: 'button';
+  top: 10%;
+  right: -25%;
+}
+
+.arrow1::before {
+  content: '';
+  background-color: #777c5a;
+  width: 150px;
+  height: 3px;
+  display: inline-block;
+  position: absolute;
+  bottom: 43%;
+  left: -30%;
+}
+
+.arrow1::after {
+  content: '';
+  background-color: #777c5a;
+  width: 3px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  bottom: 43%;
+  left: -30%;
 }
 
 section {

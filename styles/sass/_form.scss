@@ -93,14 +93,70 @@ legend h2::before,
     width: 45%;
 
     transition: all .2s;
+
+    position: relative;
     
     &:hover,
     &:focus {
-        width: 46%;
-        opacity: .80;
         background-color: $backgroundColor;
+
+        opacity: .80;
+
+        width: 46%;
     }
+
+    &::before,
+    &::after {
+        position: absolute;
+    }
+
+    &::before {
+        content: 'viewfinder';
+        bottom: 50%;
+        left: -50%;
+    }
+
+    &::after {
+        content: 'button';
+        top: 10%;
+        right: -25%;
+    }
+
 }
+
+.arrow1::before {
+    content: '';
+
+    background-color: $accentColor;
+    
+    width: 150px;
+    height: 3px;
+
+    display: inline-block;
+
+    position: absolute;
+    bottom: 43%;
+    left: -30%;
+}
+
+.arrow1::after {
+    content: '';
+
+    background-color: $accentColor;
+
+    width: 3px;
+    height: 20px;
+
+    display: inline-block;
+
+    position: absolute;
+    bottom: 43%;
+    left: -30%;
+
+}
+
+
+
 
 
 
