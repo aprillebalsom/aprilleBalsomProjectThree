@@ -341,6 +341,34 @@ cameraApp.usersPicks = function (camera, film, subject) {
     });  
 }
 
+//error handeling for form submit
+
+cameraApp.formFix = function(){
+
+    const checkRadio = $('input:checked').length;
+  
+    if (checkRadio < 3) {
+
+       alert(`oops! looks like you're missing an option. please fill out all sections and try again`)
+
+    } else {
+
+        //store the user's selections in variables
+        const usersCameraPick = $('input[name = camera]:checked').val();
+        const usersFilmPick = $('input[name = film]:checked').val();
+        const usersSubjectPick = $('input[name = subject]:checked').val();
+
+        //and run the rest of the functions
+        cameraApp.usersPicks(usersCameraPick, usersFilmPick, usersSubjectPick);
+        cameraApp.scrollDown();
+        cameraApp.displayInfo(usersCameraPick, usersFilmPick);
+        cameraApp.displayFilters();
+        cameraApp.takeAnotherPhoto();
+        
+    }
+    
+}
+
 //create a function that will scroll down the page on submit
 cameraApp.scrollDown = function () {
     $('html, body').animate({
@@ -357,7 +385,6 @@ cameraApp.scrollUp = function () {
 }
 
 
-
 //create a function that displays the photo and accompanied text on the page
 cameraApp.displayPhoto = function(source, altText) {
 
@@ -368,7 +395,6 @@ cameraApp.displayPhoto = function(source, altText) {
 
     $('.dynamicHeading').append(heading, subHeading);
     $('.filmPhoto').append(image, tape);
-    // TODO fix
 }
 
 //create a function that appends text to the page based on user's selections
@@ -417,6 +443,7 @@ cameraApp.takeAnotherPhoto = function(){
         $('.dynamicText').empty();
         $('.newPhotoButton').empty();
         $('.dynamicFilters').empty();
+
         cameraApp.scrollUp();
     })
 }
@@ -452,23 +479,13 @@ cameraApp.applyFilters = function(){
 cameraApp.init = function(){
 
     
+    
     //create an event listener for when the user submits the form 
     $('form').on('submit', function (e) {
         e.preventDefault();
        
-        // TODO:create an error handeling function for if not all options are selected
+        cameraApp.formFix();
 
-
-        //store the user's selections in variables
-        const usersCameraPick = $('input[name = camera]:checked').val();
-        const usersFilmPick = $('input[name = film]:checked').val();
-        const usersSubjectPick = $('input[name = subject]:checked').val();
-       
-        cameraApp.usersPicks(usersCameraPick, usersFilmPick, usersSubjectPick);
-        cameraApp.scrollDown();
-        cameraApp.displayInfo(usersCameraPick, usersFilmPick);
-        cameraApp.displayFilters();
-        cameraApp.takeAnotherPhoto();
     });
 }
 
