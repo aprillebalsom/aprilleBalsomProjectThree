@@ -22,6 +22,12 @@
 //THREE
 // allow user to "take another photo" by removing all selections and scrolling back to the top 
 
+//TODO
+// - clean up psudeo code
+// - check gh pages and ensure its there
+// - remove console.logs
+// - check nesting in sass
+
 
 
 //APP OBJECT
@@ -235,7 +241,6 @@ cameraApp.usersPicks = function (camera, film, subject) {
             cameraApp.displayPhoto(usersImage, usersImageAlt);
         }
 
-       
     });  
 }
 
@@ -246,7 +251,7 @@ cameraApp.formErrorHandling = function(){
   
     if (checkRadio < 3) {
 
-       alert(`oops! looks like you're missing an option. please fill out all sections and try again`)
+       alert(`oops! looks like you're missing a step. please fill out all section + try to take your photo again!`);
 
     } else {
 
