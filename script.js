@@ -24,100 +24,403 @@
 
 
 
-const filmPhoto = {
+// const filmPhoto = {
+//     leica: [
+//         {
+//             film: 'fuji',
+//             subject: 'landscape',
+//             photoId: '#leicaFujiLandscape'
+//         },
+//         {
+//             film: 'fuji',
+//             subject: 'people',
+//             photoId: '#leciaFujiPeople'
+//         },
+//         {
+//             film: 'fuji',
+//             subject: 'surprise',
+//             photoId: '#leciaFujiSurprise'
+//         },
+//         {
+//             film: 'kodak',
+//             subject: 'landscape',
+//             photoId: '#leciaKodakLandscape'
+//         },
+//         {
+//             film: 'kodak',
+//             subject: 'people',
+//             photoId: '#leicaKodakPeople'
+//         },
+//         {
+//             film: 'kodak',
+//             subject: 'surprise',
+//             photoId: '#leciaKodakSurprise'
+            
+//         },
+//         {
+//             film: 'ilford',
+//             subject: 'landscape',
+//             photoId: '#leciaIlfordLandscape'
+//         },
+//         {
+//             film: 'ilford',
+//             subject: 'people',
+//             photoId: '#leciaIlfordPeople'
+//         },
+//         {
+//             film: 'ilford',
+//             subject: 'surprise',
+//             photoId: '#leciaIlfordSurprise'
+//         },
+//     ],
+//     olympus: [
+//         {
+//             film: 'fuji',
+//             subject: 'landscape',
+//             photoId: '#olympusFujiLandscape'
+//         },
+//         {
+//             film: 'fuji',
+//             subject: 'people',
+//             photoId: '#olympusFujiPeople'
+//         },
+//         {
+//             film: 'fuji',
+//             subject: 'surprise',
+//             photoId: '#olympusFujiSurprise'
+//         },
+//         {
+//             film: 'kodak',
+//             subject: 'landscape',
+//             photoId: '#olympusKodakLandscape'
+//         },
+//         {
+//             film: 'kodak',
+//             subject: 'people',
+//             photoId: '#olympusKodakPeople'
+//         },
+//         {
+//             film: 'kodak',
+//             subject: 'surprise',
+//             photoId: '#olympusKodakSurprise'
+//         },
+//         {
+//             film: 'ilford',
+//             subject: 'landscape',
+//             photoId: '#olympusIlfordLandscape'
+//         },
+//         {
+//             film: 'ilford',
+//             subject: 'people',
+//             photoId: '#olympusIlfordPeople'
+//         },
+//         {
+//             film: 'ilford',
+//             subject: 'surprise',
+//             photoId: '#olympusIlfordSurprise'
+//         }
+//     ],
+//     canon: [
+//         {
+//             film: 'fuji',
+//             subject: 'landscape',
+//             photoId: '#canonFujiLandscape'
+//         },
+//         {
+//             film: 'fuji',
+//             subject: 'people',
+//             photoId: '#canonFujiPeople'
+//         },
+//         {
+//             film: 'fuji',
+//             subject: 'surprise',
+//             photoId: '#canonFujiSurprise'
+//         },
+//         {
+//             film: 'kodak',
+//             subject: 'landscape',
+//             photoId: '#canonKodakLandscape'
+//         },
+//         {
+//             film: 'kodak',
+//             subject: 'people',
+//             photoId: '#canonKodakPeople'
+//         },
+//         {
+//             film: 'kodak',
+//             subject: 'surprise',
+//             photoId: '#canonKodakSurprise'
+//         },
+//         {
+//             film: 'ilford',
+//             subject: 'landscape',
+//             photoId: '#canonIlfordLandscape'
+//         },
+//         {
+//             film: 'ilford',
+//             subject: 'people',
+//             photoId: '#canonIlfordPeople'
+//         },
+//         {
+//             film: 'ilford',
+//             subject: 'surprise',
+//             photoId: '#canonIlfordSurprise'
+//         }
+//     ]
+// }
+
+
+// const photoFilters = {
+//     grain: {
+//         link: './styles/assets/grain.png',
+//         title: 'A grainy film texture filter.'
+//     },
+//     doubleExposure: {
+//         link: './styles/assets/double-exposure.png',
+//         title: 'A filter overlaying a secondary photo of rocks and water at the Blue Lagoon.'
+//     },
+//     lightLeak: {
+//         link: './styles/assets/light-leak.png',
+//         title: 'A light leak filter displaying effects that happen to film when light is exposed.'
+//     } 
+// }
+
+
+// $(function(){
+
+//     const scrollDown = function () {
+//         $('html, body').animate({
+//             scrollTop: $('section').offset().top
+//         }, 1000)
+//     };
+
+//     const scrollUp = function () {
+//         $('html, body').animate({
+//             scrollTop: $('form').offset().top
+//         }, 1000)
+//     }
+
+
+
+
+    //FORM ERROR HANDLING
+    // const formSubmit = function(){
+
+    //     if (($('input[name = camera]:checked') !== $('[type = "radio"]:checked')) && ($('#olympus') != $('[type = "radio"]:checked')) && ($('#canon') != $('[type = "radio"]:checked'))) {
+    //         console.log('check');
+    //         alert(`oops! looks like your missing, please fill it out + try again!`)
+    //     } 
+
+    // }
+   
+    
+
+    // FORM EVENT LISTENER
+//     $('form').on('submit', function(e) {
+//         e.preventDefault();
+
+//         const usersCameraPick = $('input[name = camera]:checked').val();
+//         const usersFilmPick = $('input[name = film]:checked').val();
+//         const usersSubjectPick = $('input[name = subject]:checked').val();
+
+        
+//         const cameraChoice = filmPhoto[usersCameraPick];
+
+//         for (let i = 0; i < cameraChoice.length; i++) {
+           
+//             const userSelection = cameraChoice[i];
+
+
+
+//             if (usersFilmPick === userSelection.film && usersSubjectPick === userSelection.subject) {
+    
+//                 $('.dynamicHeading').append(`
+
+//                     <h2>Welcome to the club</h2>
+//                     <p>This is your photo!</p>`
+//                 );
+
+
+//                 $(userSelection.photoId).removeClass('hide').css({border: '1px solid black', padding: '25px'})
+//                 $('.tape').removeClass('hide');
+
+//                 $('.dynamicFilters').removeClass('hide');
+//                 $('.newPhotoButton').removeClass('hide');
+
+//                 const displayText = function () {
+//                     let a = 'a'
+//                     if (usersCameraPick === 'olympus') {
+//                         a = 'an';
+//                     }
+
+//                     $('.dynamicText').append(`
+
+//                     <p>Shot on ${a} <span class="special">${usersCameraPick}</span> camera using <span class="special">${userSelection.film}</span> film.</p>
+//                 `);
+//                 }
+
+//                 displayText();
+               
+//             }
+//         }
+//       scrollDown();
+//     });
+
+   
+//     $('.filter').on('click', function () {
+       
+//         $('.filterContainer').empty();
+
+//         const filterPick = $(this).attr('id');
+
+//         if (filterPick === 'reset') {
+//             $('.filterContainer').empty();
+//         } else {
+        
+//             const selectedFilter = photoFilters[filterPick];
+//             const image = $('<img>').attr('src', selectedFilter.link).attr('alt', selectedFilter.title);
+            
+//             $('.filterContainer').append(image); 
+
+//         }
+//     })
+
+//     $('.newPhotoButton').on('click', function(){
+//         $('section').empty();
+//         scrollUp();
+
+
+//          //TODO add hide classes back to things
+//         $(userSelection.photoId).addClass('hide')
+//         $('.tape').addClass('hide');
+
+//         $('.dynamicFilters').addClass('hide');
+//         $('.newPhotoButton').addClass('hide');
+
+//     })
+    
+
+// });
+
+
+//NEW TEST
+
+const cameraApp = {};
+
+cameraApp.cameraOptions = {
     leica: [
         {
-            film: 'fuji',
+            film:'fuji',
             subject: 'landscape',
-            photoId: '#leicaFujiLandscape'
+            image: './styles/assets/leica-fuji-landscape.jpg',
+            alt:'A person on a beach overlooking the water.'
         },
-        {
+        { 
             film: 'fuji',
             subject: 'people',
-            photoId: '#leciaFujiPeople'
+            image: './styles/assets/leica-fuji-people.jpg',
+            alt: 'A girl posing with a bouquet of flowers and one in her mouth in a field.'
         },
         {
             film: 'fuji',
             subject: 'surprise',
-            photoId: '#leciaFujiSurprise'
+            image: './styles/assets/leica-fuji-surprise.jpg',
+            alt: 'The Iceland flag in a field with a light leak effect.'
         },
         {
             film: 'kodak',
             subject: 'landscape',
-            photoId: '#leciaKodakLandscape'
+            image: './styles/assets/leica-kodak-landscape.jpg',
+            alt: 'A girl sitting on a cliff overlooking multiple icebergs floating in the ocean.'
         },
         {
             film: 'kodak',
             subject: 'people',
-            photoId: '#leicaKodakPeople'
+            image: './styles/assets/leica-kodak-people.jpg',
+            alt: 'A girl wearing a white veil, posing.'
         },
         {
+            //TODO check if img is working
             film: 'kodak',
             subject: 'surprise',
-            photoId: '#leciaKodakSurprise'
-            
+            image: './styles/assets/leica-kodak-surprise.JPG',
+            alt: 'A dog alseep in the doorway of a home'
+
         },
         {
             film: 'ilford',
             subject: 'landscape',
-            photoId: '#leciaIlfordLandscape'
+            image: './styles/assets/leica-ilford-landscape.JPG',
+            alt:'A staircase in Italy adorned with a cactus.'
         },
         {
             film: 'ilford',
             subject: 'people',
-            photoId: '#leciaIlfordPeople'
+            image: './styles/assets/leica-ilford-people.jpg',
+            alt:'An older man sitting on a patio drinking coffee and reading the newspaper.'
         },
         {
             film: 'ilford',
             subject: 'surprise',
-            photoId: '#leciaIlfordSurprise'
+            image: './styles/assets/leica-ilford-surprise.jpg',
+            alt:'A white fluffy alpaca chewing on some straw in a field.'
         },
     ],
     olympus: [
         {
             film: 'fuji',
             subject: 'landscape',
-            photoId: '#olympusFujiLandscape'
+            image: './styles/assets/olympus-fuji-landscape.jpg',
+            alt: 'Three cacti plants against a white wall backdrop.'
         },
         {
             film: 'fuji',
             subject: 'people',
-            photoId: '#olympusFujiPeople'
+            image: './styles/assets/olympus-fuji-people.jpg',
+            alt: 'Two models in a skatepark, posing.'
         },
         {
             film: 'fuji',
             subject: 'surprise',
-            photoId: '#olympusFujiSurprise'
+            image: './styles/assets/olympus-fuji-surprise.jpg',
+            alt: 'A dog alseep on a bed with its tongue out.'
         },
         {
             film: 'kodak',
             subject: 'landscape',
-            photoId: '#olympusKodakLandscape'
+            image: './styles/assets/olympus-kodak-landscape.JPG',
+            alt: 'A popular beach cove in Italy where the locals hang out.'
         },
         {
             film: 'kodak',
             subject: 'people',
-            photoId: '#olympusKodakPeople'
+            image: './styles/assets/olympus-kodak-people.jpg',
+            alt: 'A girl sitting in a chair against a white backdrop, posing.'
         },
         {
             film: 'kodak',
             subject: 'surprise',
-            photoId: '#olympusKodakSurprise'
+            image: './styles/assets/olympus-kodak-surprise.jpg',
+            alt: 'The view from an airplane window of fluffy white clouds.'
         },
+        //TODO i stopped here
         {
             film: 'ilford',
             subject: 'landscape',
-            photoId: '#olympusIlfordLandscape'
+            image: '#olympusIlfordLandscape',
+            alt: ''
         },
         {
             film: 'ilford',
             subject: 'people',
-            photoId: '#olympusIlfordPeople'
+            image: '#olympusIlfordPeople',
+            alt: ''
         },
         {
             film: 'ilford',
             subject: 'surprise',
-            photoId: '#olympusIlfordSurprise'
+            image: '#olympusIlfordSurprise',
+            alt: ''
         }
     ],
     canon: [
@@ -169,138 +472,41 @@ const filmPhoto = {
     ]
 }
 
+//create a function that displays the photo and accompanied text on the page
+cameraApp.displayPhoto = function(){
 
-const photoFilters = {
-    grain: {
-        link: './styles/assets/grain.png',
-        title: 'A grainy film texture filter.'
-    },
-    doubleExposure: {
-        link: './styles/assets/double-exposure.png',
-        title: 'A filter overlaying a secondary photo of rocks and water at the Blue Lagoon.'
-    },
-    lightLeak: {
-        link: './styles/assets/light-leak.png',
-        title: 'A light leak filter displaying effects that happen to film when light is exposed.'
-    } 
 }
 
 
-$(function(){
+//init function that is called once the document is ready
+cameraApp.init = function(){
 
-    const scrollDown = function () {
-        $('html, body').animate({
-            scrollTop: $('section').offset().top
-        }, 1000)
-    };
+console.log('hi');
 
-    const scrollUp = function () {
-        $('html, body').animate({
-            scrollTop: $('form').offset().top
-        }, 1000)
-    }
-
-
-
-
-    //FORM ERROR HANDLING
-    // const formSubmit = function(){
-
-    //     if (($('input[name = camera]:checked') !== $('[type = "radio"]:checked')) && ($('#olympus') != $('[type = "radio"]:checked')) && ($('#canon') != $('[type = "radio"]:checked'))) {
-    //         console.log('check');
-    //         alert(`oops! looks like your missing, please fill it out + try again!`)
-    //     } 
-
-    // }
-   
-    
-
-    // FORM EVENT LISTENER
-    $('form').on('submit', function(e) {
+//create an event listener for when the user submits the form 
+    $('form').on('submit', function (e) {
         e.preventDefault();
+
+        // create an error handeling function for if not all options are selected
+
+
 
         const usersCameraPick = $('input[name = camera]:checked').val();
         const usersFilmPick = $('input[name = film]:checked').val();
         const usersSubjectPick = $('input[name = subject]:checked').val();
 
-        
-        const cameraChoice = filmPhoto[usersCameraPick];
-
-        for (let i = 0; i < cameraChoice.length; i++) {
-           
-            const userSelection = cameraChoice[i];
-
-
-
-            if (usersFilmPick === userSelection.film && usersSubjectPick === userSelection.subject) {
-    
-                $('.dynamicHeading').append(`
-
-                    <h2>Welcome to the club</h2>
-                    <p>This is your photo!</p>`
-                );
-
-
-                $(userSelection.photoId).removeClass('hide').css({border: '1px solid black', padding: '25px'})
-                $('.tape').removeClass('hide');
-
-                $('.dynamicFilters').removeClass('hide');
-                $('.newPhotoButton').removeClass('hide');
-
-                const displayText = function () {
-                    let a = 'a'
-                    if (usersCameraPick === 'olympus') {
-                        a = 'an';
-                    }
-
-                    $('.dynamicText').append(`
-
-                    <p>Shot on ${a} <span class="special">${usersCameraPick}</span> camera using <span class="special">${userSelection.film}</span> film.</p>
-                `);
-                }
-
-                displayText();
-               
-            }
-        }
-      scrollDown();
-    });
-
-   
-    $('.filter').on('click', function () {
        
-        $('.filterContainer').empty();
-
-        const filterPick = $(this).attr('id');
-
-        if (filterPick === 'reset') {
-            $('.filterContainer').empty();
-        } else {
-        
-            const selectedFilter = photoFilters[filterPick];
-            const image = $('<img>').attr('src', selectedFilter.link).attr('alt', selectedFilter.title);
-            
-            $('.filterContainer').append(image); 
-
-        }
-    })
-
-    $('.newPhotoButton').on('click', function(){
-        $('section').empty();
-        scrollUp();
+        console.log(usersCameraPick);
+        console.log(usersFilmPick);
+        console.log(usersSubjectPick);
+    });
+}
 
 
-         //TODO add hide classes back to things
-        $(userSelection.photoId).addClass('hide')
-        $('.tape').addClass('hide');
-
-        $('.dynamicFilters').addClass('hide');
-        $('.newPhotoButton').addClass('hide');
-
-    })
-    
-
-});
+//document ready, calling the init function 
+$(function(){
+cameraApp.init();
+})
 
 
 
