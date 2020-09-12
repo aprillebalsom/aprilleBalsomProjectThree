@@ -331,7 +331,7 @@ cameraApp.usersPicks = function (camera, film, subject) {
 
             //remove appended content if user makes new selections
             $('.dynamicHeading').empty();
-            $('.dynamicImages').empty();
+            $('.filmPhoto').empty();
             $('.dynamicText').empty();
 
             cameraApp.displayPhoto(usersImage, usersImageAlt);
@@ -367,7 +367,8 @@ cameraApp.displayPhoto = function(source, altText) {
     const tape = $('<img>').attr('src', './styles/assets/tape.png').addClass('tape');
 
     $('.dynamicHeading').append(heading, subHeading);
-    $('.dynamicImages').append(image, tape);
+    $('.filmPhoto').append(image, tape);
+    // TODO fix
 }
 
 //create a function that appends text to the page based on user's selections
@@ -411,7 +412,8 @@ cameraApp.takeAnotherPhoto = function(){
     $('.newPhotoButton').on('click', function () {
 
         $('.dynamicHeading').empty();
-        $('.dynamicImages').empty();
+        $('.filmPhoto').empty();
+        $('.photoFilter').empty();
         $('.dynamicText').empty();
         $('.newPhotoButton').empty();
         $('.dynamicFilters').empty();
@@ -420,31 +422,26 @@ cameraApp.takeAnotherPhoto = function(){
 }
 
 
-
 // create an event listener for when the user clicks a filter button
 //on click a filter specific to the button will apply
 cameraApp.applyFilters = function(){
 
     $('.filter').on('click', function () {
 
-        $('.filterContainer').empty();
+        $('.photoFilter').empty();
 
         const filterPick = $(this).attr('id');
-        console.log(this);
-
-        console.log(filterPick);
-    
+      
         if (filterPick === 'reset') {
-            $('.filterContainer').empty();
+
+            $('.photoFilter').empty();
+
         } else {
 
             const selectedFilter = cameraApp.photoFilters[filterPick];
-            console.log(selectedFilter);
             const filteredImage = $('<img>').attr('src', selectedFilter.link).attr('alt', selectedFilter.title);
-            console.log(filteredImage);
 
-            $('.filterContainer').append(filteredImage);
-
+            $('.photoFilter').append(filteredImage);
         }
     })
 }
@@ -454,8 +451,7 @@ cameraApp.applyFilters = function(){
 //init function that is called once the document is ready
 cameraApp.init = function(){
 
-    console.log('hi');
-
+    
     //create an event listener for when the user submits the form 
     $('form').on('submit', function (e) {
         e.preventDefault();

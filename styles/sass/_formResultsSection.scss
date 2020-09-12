@@ -20,15 +20,17 @@ section {
 
 .dynamicImageAndText {
     width: calc(65% - 30px);
+    display: flex;
+    flex-direction: column;
 }
 
 .dynamicImages {
     position: relative;
 }
 
-.filterContainer {
-    // opacity: .5;
-    
+.photoFilter {
+    opacity: .5;
+
     padding: 25px;
 
     position: absolute;
@@ -101,6 +103,6 @@ button {
     position: absolute;
     top: -2%;
     left: 33%;
-    z-index: 10;
+    z-index: 20;
 
 }
