@@ -307,7 +307,7 @@
 
 const cameraApp = {};
 
-cameraApp.cameraOptions = {
+cameraApp.cameras = {
     leica: [
         {
             film:'fuji',
@@ -403,79 +403,115 @@ cameraApp.cameraOptions = {
             image: './styles/assets/olympus-kodak-surprise.jpg',
             alt: 'The view from an airplane window of fluffy white clouds.'
         },
-        //TODO i stopped here
         {
             film: 'ilford',
             subject: 'landscape',
-            image: '#olympusIlfordLandscape',
-            alt: ''
+            image: './styles/assets/olympus-ilford-landscape.jpg',
+            alt: 'A black church atop a hill in Iceland.'
         },
         {
             film: 'ilford',
             subject: 'people',
-            image: '#olympusIlfordPeople',
-            alt: ''
+            image: './styles/assets/olympus-ilford-people.jpg',
+            alt: 'A girl standing on a beach carrying beach chairs and a hat.'
         },
         {
             film: 'ilford',
             subject: 'surprise',
-            image: '#olympusIlfordSurprise',
-            alt: ''
+            image: './styles/assets/olympus-ilford-surprise.jpg',
+            alt: 'Large basalt cliffs.'
         }
     ],
     canon: [
         {
             film: 'fuji',
             subject: 'landscape',
-            photoId: '#canonFujiLandscape'
+            image: './styles/assets/canon-fuji-landscape.jpg',
+            alt:'A boat pulled up on the rocky beach along the coast of Newfoundland.'
         },
         {
             film: 'fuji',
             subject: 'people',
-            photoId: '#canonFujiPeople'
+            image: './styles/assets/canon-fuji-people.jpg',
+            alt:'A girl sitting on a dock staring into the camera.'
         },
         {
             film: 'fuji',
             subject: 'surprise',
-            photoId: '#canonFujiSurprise'
+            image: './styles/assets/canon-fuji-surprise.jpg',
+            alt:'A koala bear sitting up in a tree.'
         },
         {
             film: 'kodak',
             subject: 'landscape',
-            photoId: '#canonKodakLandscape'
+            image: './styles/assets/canon-kodak-landscape.jpg',
+            alt:'A man walking along a dock surrounded by boats at sunset.'
         },
         {
             film: 'kodak',
             subject: 'people',
-            photoId: '#canonKodakPeople'
+            image: './styles/assets/canon-kodak-people.jpg',
+            alt:'A girl kicking her leg in the air.'
         },
         {
             film: 'kodak',
             subject: 'surprise',
-            photoId: '#canonKodakSurprise'
+            image: './styles/assets/canon-kodak-surprise.jpg',
+            alt:'A hotel nook with two cozy blue chairs overlooking a window.'
         },
         {
             film: 'ilford',
             subject: 'landscape',
-            photoId: '#canonIlfordLandscape'
+            image: './styles/assets/canon-ilford-landscape.jpg',
+            alt:'A large waterfall in Iceland.'
         },
         {
             film: 'ilford',
             subject: 'people',
-            photoId: '#canonIlfordPeople'
+            image: './styles/assets/canon-ilford-people.jpg',
+            alt: 'A group of friends laughing in a group.'
         },
         {
             film: 'ilford',
             subject: 'surprise',
-            photoId: '#canonIlfordSurprise'
+            image: './styles/assets/canon-ilford-surprise.jpg',
+            alt: `An original photobooth from the 1970's, in Australia.`
         }
     ]
 }
 
-//create a function that displays the photo and accompanied text on the page
-cameraApp.displayPhoto = function(){
+// create a function that takes the user's camera selection and filters through the options object to find its match and return it
+cameraApp.usersPicks = function (camera, film, subject) {
 
+    const cameraOptions = cameraApp.cameras[camera]
+    console.log(cameraOptions);
+  
+    cameraOptions.filter((cameraOption) => {
+     
+        // find the film choice and subject choice within the camera array that matches the users selections 
+        if (film === cameraOption.film && subject === cameraOption.subject) {
+            const usersImage = cameraOption.image 
+            const usersImageAlt = cameraOption.alt
+
+            cameraApp.displayPhoto(usersImage, usersImageAlt);
+        }
+      
+       
+    });  
 }
+
+
+//create a function that displays the photo and accompanied text on the page
+cameraApp.displayPhoto = function(source, altText){
+
+    const heading = $('<h2>').text('Welcome to the club');
+    const subHeading = $('<p>').text('This is your photo!');
+    const image = $('<img>').attr('src', source).attr('alt', altText)
+
+    $('.dynamicHeading').append(heading, subHeading);
+    $('.dynamicImages').append(image);
+}
+
 
 
 //init function that is called once the document is ready
@@ -490,15 +526,12 @@ console.log('hi');
         // create an error handeling function for if not all options are selected
 
 
-
+        //store the user's selections in variables
         const usersCameraPick = $('input[name = camera]:checked').val();
         const usersFilmPick = $('input[name = film]:checked').val();
         const usersSubjectPick = $('input[name = subject]:checked').val();
 
-       
-        console.log(usersCameraPick);
-        console.log(usersFilmPick);
-        console.log(usersSubjectPick);
+        cameraApp.usersPicks(usersCameraPick, usersFilmPick, usersSubjectPick);
     });
 }
 
@@ -514,3 +547,4 @@ cameraApp.init();
 
 
 
+ //empty out the contents of the section
