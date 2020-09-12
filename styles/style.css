@@ -462,7 +462,7 @@ legend h2::before,
 
 .formButton::after {
   content: 'button';
-  top: 10%;
+  top: 7%;
   right: -50%;
 }
 
@@ -478,23 +478,24 @@ legend h2::before,
 
 .arrow1::before,
 .arrow1::after {
-  bottom: 43%;
   left: -30%;
 }
 
 .arrow1::before {
-  width: 53%;
+  width: 73%;
   height: 1%;
+  bottom: 73%;
 }
 
 .arrow1::after {
   width: 1%;
-  height: 7%;
+  height: 13%;
+  bottom: 60%;
 }
 
 .arrow2::before,
 .arrow2::after {
-  bottom: 77%;
+  bottom: 79%;
   right: -30%;
 }
 
