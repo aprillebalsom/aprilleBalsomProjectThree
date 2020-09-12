@@ -542,13 +542,13 @@ section {
 }
 
 .filterContainer {
-  opacity: .5;
   padding: 25px;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: 10;
 }
 
 .dynamicText {

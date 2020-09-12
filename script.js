@@ -24,182 +24,6 @@
 
 
 
-// const filmPhoto = {
-//     leica: [
-//         {
-//             film: 'fuji',
-//             subject: 'landscape',
-//             photoId: '#leicaFujiLandscape'
-//         },
-//         {
-//             film: 'fuji',
-//             subject: 'people',
-//             photoId: '#leciaFujiPeople'
-//         },
-//         {
-//             film: 'fuji',
-//             subject: 'surprise',
-//             photoId: '#leciaFujiSurprise'
-//         },
-//         {
-//             film: 'kodak',
-//             subject: 'landscape',
-//             photoId: '#leciaKodakLandscape'
-//         },
-//         {
-//             film: 'kodak',
-//             subject: 'people',
-//             photoId: '#leicaKodakPeople'
-//         },
-//         {
-//             film: 'kodak',
-//             subject: 'surprise',
-//             photoId: '#leciaKodakSurprise'
-            
-//         },
-//         {
-//             film: 'ilford',
-//             subject: 'landscape',
-//             photoId: '#leciaIlfordLandscape'
-//         },
-//         {
-//             film: 'ilford',
-//             subject: 'people',
-//             photoId: '#leciaIlfordPeople'
-//         },
-//         {
-//             film: 'ilford',
-//             subject: 'surprise',
-//             photoId: '#leciaIlfordSurprise'
-//         },
-//     ],
-//     olympus: [
-//         {
-//             film: 'fuji',
-//             subject: 'landscape',
-//             photoId: '#olympusFujiLandscape'
-//         },
-//         {
-//             film: 'fuji',
-//             subject: 'people',
-//             photoId: '#olympusFujiPeople'
-//         },
-//         {
-//             film: 'fuji',
-//             subject: 'surprise',
-//             photoId: '#olympusFujiSurprise'
-//         },
-//         {
-//             film: 'kodak',
-//             subject: 'landscape',
-//             photoId: '#olympusKodakLandscape'
-//         },
-//         {
-//             film: 'kodak',
-//             subject: 'people',
-//             photoId: '#olympusKodakPeople'
-//         },
-//         {
-//             film: 'kodak',
-//             subject: 'surprise',
-//             photoId: '#olympusKodakSurprise'
-//         },
-//         {
-//             film: 'ilford',
-//             subject: 'landscape',
-//             photoId: '#olympusIlfordLandscape'
-//         },
-//         {
-//             film: 'ilford',
-//             subject: 'people',
-//             photoId: '#olympusIlfordPeople'
-//         },
-//         {
-//             film: 'ilford',
-//             subject: 'surprise',
-//             photoId: '#olympusIlfordSurprise'
-//         }
-//     ],
-//     canon: [
-//         {
-//             film: 'fuji',
-//             subject: 'landscape',
-//             photoId: '#canonFujiLandscape'
-//         },
-//         {
-//             film: 'fuji',
-//             subject: 'people',
-//             photoId: '#canonFujiPeople'
-//         },
-//         {
-//             film: 'fuji',
-//             subject: 'surprise',
-//             photoId: '#canonFujiSurprise'
-//         },
-//         {
-//             film: 'kodak',
-//             subject: 'landscape',
-//             photoId: '#canonKodakLandscape'
-//         },
-//         {
-//             film: 'kodak',
-//             subject: 'people',
-//             photoId: '#canonKodakPeople'
-//         },
-//         {
-//             film: 'kodak',
-//             subject: 'surprise',
-//             photoId: '#canonKodakSurprise'
-//         },
-//         {
-//             film: 'ilford',
-//             subject: 'landscape',
-//             photoId: '#canonIlfordLandscape'
-//         },
-//         {
-//             film: 'ilford',
-//             subject: 'people',
-//             photoId: '#canonIlfordPeople'
-//         },
-//         {
-//             film: 'ilford',
-//             subject: 'surprise',
-//             photoId: '#canonIlfordSurprise'
-//         }
-//     ]
-// }
-
-
-// const photoFilters = {
-//     grain: {
-//         link: './styles/assets/grain.png',
-//         title: 'A grainy film texture filter.'
-//     },
-//     doubleExposure: {
-//         link: './styles/assets/double-exposure.png',
-//         title: 'A filter overlaying a secondary photo of rocks and water at the Blue Lagoon.'
-//     },
-//     lightLeak: {
-//         link: './styles/assets/light-leak.png',
-//         title: 'A light leak filter displaying effects that happen to film when light is exposed.'
-//     } 
-// }
-
-
-// $(function(){
-
-//     const scrollDown = function () {
-//         $('html, body').animate({
-//             scrollTop: $('section').offset().top
-//         }, 1000)
-//     };
-
-//     const scrollUp = function () {
-//         $('html, body').animate({
-//             scrollTop: $('form').offset().top
-//         }, 1000)
-//     }
-
 
 
 
@@ -267,23 +91,23 @@
 //     });
 
    
-//     $('.filter').on('click', function () {
+    // $('.filter').on('click', function () {
        
-//         $('.filterContainer').empty();
+    //     $('.filterContainer').empty();
 
-//         const filterPick = $(this).attr('id');
+    //     const filterPick = $(this).attr('id');
 
-//         if (filterPick === 'reset') {
-//             $('.filterContainer').empty();
-//         } else {
+    //     if (filterPick === 'reset') {
+    //         $('.filterContainer').empty();
+    //     } else {
         
-//             const selectedFilter = photoFilters[filterPick];
-//             const image = $('<img>').attr('src', selectedFilter.link).attr('alt', selectedFilter.title);
+    //         const selectedFilter = photoFilters[filterPick];
+    //         const image = $('<img>').attr('src', selectedFilter.link).attr('alt', selectedFilter.title);
             
-//             $('.filterContainer').append(image); 
+    //         $('.filterContainer').append(image); 
 
-//         }
-//     })
+    //     }
+    // })
 
 //     $('.newPhotoButton').on('click', function(){
 //         $('section').empty();
@@ -340,7 +164,6 @@ cameraApp.cameras = {
             alt: 'A girl wearing a white veil, posing.'
         },
         {
-            //TODO check if img is working
             film: 'kodak',
             subject: 'surprise',
             image: './styles/assets/leica-kodak-surprise.JPG',
@@ -480,6 +303,21 @@ cameraApp.cameras = {
     ]
 }
 
+cameraApp.photoFilters = {
+    grain: {
+        link: './styles/assets/grain.png',
+        title: 'A grainy film texture filter.'
+    },
+    doubleExposure: {
+        link: './styles/assets/double-exposure.png',
+        title: 'A filter overlaying a secondary photo of rocks and water at the Blue Lagoon.'
+    },
+    lightLeak: {
+        link: './styles/assets/light-leak.png',
+        title: 'A light leak filter displaying effects that happen to film when light is exposed.'
+    }
+}
+
 // create a function that takes the user's camera selection and filters through the options object to find its match and return it
 cameraApp.usersPicks = function (camera, film, subject) {
     const cameraOptions = cameraApp.cameras[camera]
@@ -494,6 +332,7 @@ cameraApp.usersPicks = function (camera, film, subject) {
             //remove appended content if user makes new selections
             $('.dynamicHeading').empty();
             $('.dynamicImages').empty();
+            $('.dynamicText').empty();
 
             cameraApp.displayPhoto(usersImage, usersImageAlt);
         }
@@ -501,6 +340,22 @@ cameraApp.usersPicks = function (camera, film, subject) {
        
     });  
 }
+
+//create a function that will scroll down the page on submit
+cameraApp.scrollDown = function () {
+    $('html, body').animate({
+        scrollTop: $('section').offset().top
+    }, 1000)
+};
+
+
+//create a function that will scroll back to the top when user clicks, take another photo
+cameraApp.scrollUp = function () {
+    $('html, body').animate({
+        scrollTop: $('form').offset().top
+    }, 1000)
+}
+
 
 
 //create a function that displays the photo and accompanied text on the page
@@ -527,6 +382,71 @@ cameraApp.displayInfo = function(cameraSelected, filmSelected) {
     const cameraInfo = $('<p>').append(`Shot on ${a} <span class="special">${cameraSelected}</span> camera using <span class="special">${filmSelected}</span> film.`)
 
     $('.dynamicText').append(cameraInfo);
+    
+}
+
+//create a function that appends buttons that apply image filters to the page 
+cameraApp.displayFilters = function() {
+
+    const filterHeading = $('<h3>').text('Add a filter');
+    const grainFilter = $('<button>').text('Grain').addClass('filter').attr('id', 'grain');
+    const dblExpFilter = $('<button>').text('Double Exposure').addClass('filter longName').attr('id', 'doubleExposure');
+    const lightLeakFilter = $('<button>').text('Light Leak').addClass('filter').attr('id', 'lightLeak');
+    const removeFilter = $('<button>').text('Original').addClass('filter').attr('id', 'reset');
+
+    $('.dynamicFilters').append(filterHeading, grainFilter, dblExpFilter, lightLeakFilter, removeFilter);
+
+    cameraApp.applyFilters();
+}
+
+
+//create a function that appends a take another photo button to the page
+//create an event listener for when the user clicks the button, restarting the quiz
+
+cameraApp.takeAnotherPhoto = function(){
+
+    const tryAgain = $('<button>').text('Take another Photo');
+    $('.newPhotoButton').append(tryAgain);
+
+    $('.newPhotoButton').on('click', function () {
+
+        $('.dynamicHeading').empty();
+        $('.dynamicImages').empty();
+        $('.dynamicText').empty();
+        $('.newPhotoButton').empty();
+        $('.dynamicFilters').empty();
+        cameraApp.scrollUp();
+    })
+}
+
+
+
+// create an event listener for when the user clicks a filter button
+//on click a filter specific to the button will apply
+cameraApp.applyFilters = function(){
+
+    $('.filter').on('click', function () {
+
+        $('.filterContainer').empty();
+
+        const filterPick = $(this).attr('id');
+        console.log(this);
+
+        console.log(filterPick);
+    
+        if (filterPick === 'reset') {
+            $('.filterContainer').empty();
+        } else {
+
+            const selectedFilter = cameraApp.photoFilters[filterPick];
+            console.log(selectedFilter);
+            const filteredImage = $('<img>').attr('src', selectedFilter.link).attr('alt', selectedFilter.title);
+            console.log(filteredImage);
+
+            $('.filterContainer').append(filteredImage);
+
+        }
+    })
 }
 
 
@@ -534,14 +454,13 @@ cameraApp.displayInfo = function(cameraSelected, filmSelected) {
 //init function that is called once the document is ready
 cameraApp.init = function(){
 
-console.log('hi');
+    console.log('hi');
 
-//create an event listener for when the user submits the form 
+    //create an event listener for when the user submits the form 
     $('form').on('submit', function (e) {
         e.preventDefault();
        
-
-        // create an error handeling function for if not all options are selected
+        // TODO:create an error handeling function for if not all options are selected
 
 
         //store the user's selections in variables
@@ -550,16 +469,18 @@ console.log('hi');
         const usersSubjectPick = $('input[name = subject]:checked').val();
        
         cameraApp.usersPicks(usersCameraPick, usersFilmPick, usersSubjectPick);
+        cameraApp.scrollDown();
         cameraApp.displayInfo(usersCameraPick, usersFilmPick);
-        
+        cameraApp.displayFilters();
+        cameraApp.takeAnotherPhoto();
     });
 }
 
 
 //document ready, calling the init function 
 $(function(){
-cameraApp.init();
-})
+    cameraApp.init();
+});
 
 
 
