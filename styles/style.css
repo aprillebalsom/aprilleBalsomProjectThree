@@ -278,7 +278,7 @@ html {
 }
 
 body {
-  background-color: #eae3d9;
+  background-color: #e9e2d8;
   color: #2f2d2b;
   border: 1px solid #2f2d2b;
   font-size: clamp(1.6rem, 1.5vw, 2rem);
@@ -340,7 +340,7 @@ footer {
 }
 
 footer a {
-  color: #777c5a;
+  color: #4d6656;
 }
 
 legend h2 {
@@ -384,7 +384,7 @@ label {
 
 label:hover {
   background-color: #f9f7f4;
-  color: rgba(47, 45, 43, 0.85);
+  color: #2f2d2bd9;
   letter-spacing: 6px;
 }
 
@@ -405,7 +405,7 @@ input[type="radio"]:active + label {
 
 input[type="radio"]:focus + label {
   letter-spacing: 6px;
-  color: rgba(47, 45, 43, 0.85);
+  color: #2f2d2bd9;
 }
 
 .formSubmit {
@@ -426,7 +426,7 @@ input[type="radio"]:focus + label {
 legend h2::before,
 .accent::before {
   content: ' ';
-  background-color: rgba(161, 163, 149, 0.75);
+  background-color: #4d665666;
   width: 95%;
   height: 39%;
   display: inline-block;
@@ -445,7 +445,7 @@ legend h2::before,
 }
 
 .formButton:hover, .formButton:focus {
-  background-color: #eae3d9;
+  background-color: #e9e2d8;
   opacity: .80;
   width: 46%;
 }
@@ -471,7 +471,7 @@ legend h2::before,
 .arrow2::before,
 .arrow2::after {
   content: '';
-  background-color: #777c5a;
+  background-color: #4d6656;
   display: inline-block;
   position: absolute;
 }
@@ -569,7 +569,7 @@ section {
 
 .dynamicText .special::after {
   content: ' ';
-  background-color: rgba(161, 163, 149, 0.75);
+  background-color: #4d665666;
   width: 90%;
   height: 40%;
   display: inline-block;
@@ -594,7 +594,7 @@ button {
 
 button:hover, button:focus {
   background-color: #f9f7f4;
-  color: rgba(47, 45, 43, 0.85);
+  color: #2f2d2bd9;
   letter-spacing: 6px;
 }
 
@@ -713,7 +713,7 @@ button:hover, button:focus {
   }
   h1 span::before {
     content: '';
-    background-color: rgba(161, 163, 149, 0.75);
+    background-color: #4d665666;
     width: 95%;
     height: 40%;
     display: inline-block;

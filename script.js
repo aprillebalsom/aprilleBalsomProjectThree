@@ -24,111 +24,7 @@
 
 
 
-
-
-
-    //FORM ERROR HANDLING
-    // const formSubmit = function(){
-
-    //     if (($('input[name = camera]:checked') !== $('[type = "radio"]:checked')) && ($('#olympus') != $('[type = "radio"]:checked')) && ($('#canon') != $('[type = "radio"]:checked'))) {
-    //         console.log('check');
-    //         alert(`oops! looks like your missing, please fill it out + try again!`)
-    //     } 
-
-    // }
-   
-    
-
-    // FORM EVENT LISTENER
-//     $('form').on('submit', function(e) {
-//         e.preventDefault();
-
-//         const usersCameraPick = $('input[name = camera]:checked').val();
-//         const usersFilmPick = $('input[name = film]:checked').val();
-//         const usersSubjectPick = $('input[name = subject]:checked').val();
-
-        
-//         const cameraChoice = filmPhoto[usersCameraPick];
-
-//         for (let i = 0; i < cameraChoice.length; i++) {
-           
-//             const userSelection = cameraChoice[i];
-
-
-
-//             if (usersFilmPick === userSelection.film && usersSubjectPick === userSelection.subject) {
-    
-//                 $('.dynamicHeading').append(`
-
-//                     <h2>Welcome to the club</h2>
-//                     <p>This is your photo!</p>`
-//                 );
-
-
-//                 $(userSelection.photoId).removeClass('hide').css({border: '1px solid black', padding: '25px'})
-//                 $('.tape').removeClass('hide');
-
-//                 $('.dynamicFilters').removeClass('hide');
-//                 $('.newPhotoButton').removeClass('hide');
-
-//                 const displayText = function () {
-//                     let a = 'a'
-//                     if (usersCameraPick === 'olympus') {
-//                         a = 'an';
-//                     }
-
-//                     $('.dynamicText').append(`
-
-//                     <p>Shot on ${a} <span class="special">${usersCameraPick}</span> camera using <span class="special">${userSelection.film}</span> film.</p>
-//                 `);
-//                 }
-
-//                 displayText();
-               
-//             }
-//         }
-//       scrollDown();
-//     });
-
-   
-    // $('.filter').on('click', function () {
-       
-    //     $('.filterContainer').empty();
-
-    //     const filterPick = $(this).attr('id');
-
-    //     if (filterPick === 'reset') {
-    //         $('.filterContainer').empty();
-    //     } else {
-        
-    //         const selectedFilter = photoFilters[filterPick];
-    //         const image = $('<img>').attr('src', selectedFilter.link).attr('alt', selectedFilter.title);
-            
-    //         $('.filterContainer').append(image); 
-
-    //     }
-    // })
-
-//     $('.newPhotoButton').on('click', function(){
-//         $('section').empty();
-//         scrollUp();
-
-
-//          //TODO add hide classes back to things
-//         $(userSelection.photoId).addClass('hide')
-//         $('.tape').addClass('hide');
-
-//         $('.dynamicFilters').addClass('hide');
-//         $('.newPhotoButton').addClass('hide');
-
-//     })
-    
-
-// });
-
-
-//NEW TEST
-
+//APP OBJECT
 const cameraApp = {};
 
 cameraApp.cameras = {
@@ -318,6 +214,8 @@ cameraApp.photoFilters = {
     }
 }
 
+
+
 // create a function that takes the user's camera selection and filters through the options object to find its match and return it
 cameraApp.usersPicks = function (camera, film, subject) {
     const cameraOptions = cameraApp.cameras[camera]
@@ -342,8 +240,7 @@ cameraApp.usersPicks = function (camera, film, subject) {
 }
 
 //error handeling for form submit
-
-cameraApp.formFix = function(){
+cameraApp.formErrorHandling = function(){
 
     const checkRadio = $('input:checked').length;
   
@@ -475,30 +372,20 @@ cameraApp.applyFilters = function(){
 
 
 
-//init function that is called once the document is ready
+//INIT FUNCTION: kicks off the app
 cameraApp.init = function(){
-
-    
     
     //create an event listener for when the user submits the form 
     $('form').on('submit', function (e) {
         e.preventDefault();
        
-        cameraApp.formFix();
-
+        cameraApp.formErrorHandling();
     });
 }
 
 
-//document ready, calling the init function 
+//DOCUMENT READY FUNCTION
 $(function(){
     cameraApp.init();
 });
 
-
-
-
-
-
-
-//empty out the contents of the section

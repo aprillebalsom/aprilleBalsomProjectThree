@@ -1,11 +1,10 @@
 //DECLARING VARIABLES
-// TODO check that colors are up to accessibility terms
-$backgroundColor: rgb(234, 227, 217);
-$fontColor:  rgb(47, 45, 43);
-$highlightedFontColor: rgba(47, 45, 43, .85);
-$accentColor: rgb(119, 124, 90);
-$secondaryAccentColor: rgba(161, 163, 149, .75);
-$buttonColor: rgb(249, 247, 244);
+$backgroundColor: #e9e2d8;
+$fontColor:  #2f2d2b;
+$highlightedFontColor: #2f2d2bd9;
+$accentColor: #4d6656;
+$secondaryAccentColor: #4d665666;
+$buttonColor: #f9f7f4;
 
 //IMPORTING OF PARTIALS
 @import 'setup';
