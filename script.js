@@ -482,34 +482,51 @@ cameraApp.cameras = {
 
 // create a function that takes the user's camera selection and filters through the options object to find its match and return it
 cameraApp.usersPicks = function (camera, film, subject) {
-
     const cameraOptions = cameraApp.cameras[camera]
     console.log(cameraOptions);
   
     cameraOptions.filter((cameraOption) => {
-     
         // find the film choice and subject choice within the camera array that matches the users selections 
         if (film === cameraOption.film && subject === cameraOption.subject) {
             const usersImage = cameraOption.image 
             const usersImageAlt = cameraOption.alt
 
+            //remove appended content if user makes new selections
+            $('.dynamicHeading').empty();
+            $('.dynamicImages').empty();
+
             cameraApp.displayPhoto(usersImage, usersImageAlt);
         }
-      
+
        
     });  
 }
 
 
 //create a function that displays the photo and accompanied text on the page
-cameraApp.displayPhoto = function(source, altText){
+cameraApp.displayPhoto = function(source, altText) {
 
     const heading = $('<h2>').text('Welcome to the club');
     const subHeading = $('<p>').text('This is your photo!');
-    const image = $('<img>').attr('src', source).attr('alt', altText)
+    const image = $('<img>').attr('src', source).attr('alt', altText).css({ border: '1px solid black', padding: '25px' });
+    const tape = $('<img>').attr('src', './styles/assets/tape.png').addClass('tape');
 
     $('.dynamicHeading').append(heading, subHeading);
-    $('.dynamicImages').append(image);
+    $('.dynamicImages').append(image, tape);
+}
+
+//create a function that appends text to the page based on user's selections
+//create a conditional that adjusts text for proper grammar
+cameraApp.displayInfo = function(cameraSelected, filmSelected) {
+
+    let a = 'a'
+    if (cameraSelected === 'olympus') {
+        a = 'an';
+    }
+
+    const cameraInfo = $('<p>').append(`Shot on ${a} <span class="special">${cameraSelected}</span> camera using <span class="special">${filmSelected}</span> film.`)
+
+    $('.dynamicText').append(cameraInfo);
 }
 
 
@@ -522,6 +539,7 @@ console.log('hi');
 //create an event listener for when the user submits the form 
     $('form').on('submit', function (e) {
         e.preventDefault();
+       
 
         // create an error handeling function for if not all options are selected
 
@@ -530,8 +548,10 @@ console.log('hi');
         const usersCameraPick = $('input[name = camera]:checked').val();
         const usersFilmPick = $('input[name = film]:checked').val();
         const usersSubjectPick = $('input[name = subject]:checked').val();
-
+       
         cameraApp.usersPicks(usersCameraPick, usersFilmPick, usersSubjectPick);
+        cameraApp.displayInfo(usersCameraPick, usersFilmPick);
+        
     });
 }
 
@@ -547,4 +567,4 @@ cameraApp.init();
 
 
 
- //empty out the contents of the section
+//empty out the contents of the section
