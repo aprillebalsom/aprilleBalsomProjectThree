@@ -238,6 +238,8 @@ html {
 body,
 h1,
 h2,
+h3,
+h4,
 p,
 a,
 ul,
@@ -289,17 +291,8 @@ body {
   margin: 20px;
 }
 
-header {
-  padding: 40px 0;
-}
-
 main {
   padding: 40px 10px;
-}
-
-footer {
-  text-align: right;
-  padding: 20px 0;
 }
 
 h1 {
@@ -314,6 +307,10 @@ h2 {
 
 h3 {
   font-size: clamp(2rem, 3vw, 3.2rem);
+}
+
+h4 {
+  font-size: clamp(1.6rem, 0.5vw, 2.2rem);
 }
 
 p {
@@ -336,11 +333,52 @@ header img {
 }
 
 footer {
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer a {
   color: #4d6656;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.icons a {
+  font-size: clamp(2rem, 2vw, 2.8rem);
+  padding: 10px;
+  display: block;
+}
+
+.icons a:first-of-type {
+  padding-left: 0;
+}
+
+.creatorInfo {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 legend h2 {
@@ -654,6 +692,22 @@ button:hover, button:focus {
   .formButton:hover, .formButton:focus {
     width: 52%;
   }
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .creatorInfo {
+    text-align: left;
+    padding-top: 10px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -700,10 +754,6 @@ button:hover, button:focus {
   }
   .dynamicFilters {
     width: 80%;
-  }
-  footer {
-    font-size: 1.2rem;
-    text-align: left;
   }
 }
 

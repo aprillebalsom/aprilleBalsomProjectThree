@@ -47,6 +47,18 @@
         }
     }
 
+    footer {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .creatorInfo {
+        text-align:left;
+
+        padding-top: 10px;
+    }
+
 }
 
 @media (max-width: 560px) {
@@ -102,12 +114,6 @@
     .dynamicFilters {
         width: 80%;
     }
-
-    footer {
-        font-size: 1.2rem;
-        text-align: left;
-    }
-
 }
 
 @media (max-width: 420px) {

@@ -8,11 +8,39 @@ header {
 }
 
 //FOOTER STYLES
-
 footer {
-    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+
+    padding: 20px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     a {
         color: $accentColor;
     }
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+
+    a {
+        font-size: clamp(2rem, 2vw, 2.8rem);
+        padding: 10px;
+        display: block;
+
+        &:first-of-type {
+            padding-left: 0;
+        }
+    }
+}
+
+.creatorInfo {
+    text-align: right;
+
+    display: flex;
+    flex-direction: column;
+
 }
