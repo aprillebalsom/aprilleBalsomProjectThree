@@ -315,7 +315,6 @@ h4 {
 
 p {
   font-style: italic;
-  font-weight: lighter;
 }
 
 .wrapper {
@@ -333,7 +332,7 @@ header img {
 }
 
 footer {
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
   padding: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -442,8 +441,8 @@ input[type="radio"]:active + label {
 }
 
 input[type="radio"]:focus + label {
-  letter-spacing: 6px;
   color: #2f2d2bd9;
+  letter-spacing: 6px;
 }
 
 .formSubmit {
@@ -549,10 +548,6 @@ legend h2::before,
 
 section {
   padding: 20px 0;
-}
-
-.hide {
-  display: none;
 }
 
 .dynamicHeading {

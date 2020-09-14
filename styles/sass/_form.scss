@@ -23,8 +23,11 @@ label {
 
     width: 70%;
     padding: 15px 0;
+
     position: relative;
+
     align-self: center;
+
     transition: all .3s;
 
     &:hover {
@@ -46,12 +49,13 @@ label {
 input[type="radio"]:checked + label,
 input[type="radio"]:focus + label,
 input[type="radio"]:active + label {
-     background-color: $buttonColor;
+    background-color: $buttonColor;
 }
 
 input[type="radio"]:focus + label {
-    letter-spacing: 6px;
     color: $highlightedFontColor;
+
+    letter-spacing: 6px;
 }
 
 .formSubmit {
@@ -112,16 +116,17 @@ legend h2::before,
 
     &::before {
         content: 'viewfinder';
+
         bottom: 52%;
         left: -55%;
     }
 
     &::after {
         content: 'button';
+
         top: 7%;
         right: -50%;
     }
-
 }
 
 .arrow1::before,

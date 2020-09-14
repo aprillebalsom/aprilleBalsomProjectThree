@@ -1,6 +1,6 @@
 //MEDIA QUERIES START HERE
-
 @media (max-width: 940px) {
+
     label,
     button {
         letter-spacing: 3px;
@@ -10,7 +10,6 @@
             letter-spacing: 3px;
         }
     }
-
 }
 
 @media (max-width: 768px) {
@@ -86,8 +85,7 @@
         &::before,
         &::after {
             display: none;
-        }
-        
+        } 
     }
     
     .arrow1,
