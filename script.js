@@ -1,38 +1,7 @@
-// PROJECT 3
-// add document ready function
-// create event listener for when user submits form
-// remove default behaviour from form
-// upon submit, save user inputs from form and store them in variables
-// take users first selection and match to the corresponding object
-// take users second selection and match to the corresponding object
-// take users third selection and match to the corresponding object
-// when all selections match, add class of specific image to the page and append "camera name" and film type" that user selected below it
-
-
-//STRETCH GOALS
-
-//ONE
-// have an array on the nested third level
-//add a randomizer function to select a photo at random from a group dependant upon user selections
-// append that image to the page 
-
-//TWO
-// allow user to apply a filter to the image by toggling one of the filter buttons
-
-//THREE
-// allow user to "take another photo" by removing all selections and scrolling back to the top 
-
-//TODO
-// - clean up psudeo code
-// - check gh pages and ensure its there
-// - remove console.logs
-// - check nesting in sass
-
-
-
-//APP OBJECT
+// APP OBJECT
 const cameraApp = {};
 
+// APPENDED IMAGE CONTENT OBJECT
 cameraApp.cameras = {
     leica: [
         {
@@ -45,7 +14,7 @@ cameraApp.cameras = {
             film: 'fuji',
             subject: 'people',
             image: './styles/assets/leica-fuji-people.jpg',
-            alt: 'A girl posing with a bouquet of flowers and one in her mouth in a field.'
+            alt: 'A girl standing in a field, posing with a bouquet of flowers and one in her mouth.'
         },
         {
             film: 'fuji',
@@ -69,14 +38,13 @@ cameraApp.cameras = {
             film: 'kodak',
             subject: 'surprise',
             image: './styles/assets/leica-kodak-surprise.JPG',
-            alt: 'A dog alseep in the doorway of a home'
-
+            alt: 'An English bulldog alseep in the doorway of a home.'
         },
         {
             film: 'ilford',
             subject: 'landscape',
             image: './styles/assets/leica-ilford-landscape.JPG',
-            alt:'A staircase in Italy adorned with a cactus.'
+            alt:'A staircase in Italy adorned with a cactus and flowerbox in the window.'
         },
         {
             film: 'ilford',
@@ -114,7 +82,7 @@ cameraApp.cameras = {
             film: 'kodak',
             subject: 'landscape',
             image: './styles/assets/olympus-kodak-landscape.JPG',
-            alt: 'A popular beach cove in Italy where the locals hang out.'
+            alt: 'A popular beach cove in Italy where the locals hang out and go swimming.'
         },
         {
             film: 'kodak',
@@ -144,7 +112,7 @@ cameraApp.cameras = {
             film: 'ilford',
             subject: 'surprise',
             image: './styles/assets/olympus-ilford-surprise.jpg',
-            alt: 'Large basalt cliffs.'
+            alt: 'Large basalt cliffs in Iceland.'
         }
     ],
     canon: [
@@ -176,7 +144,7 @@ cameraApp.cameras = {
             film: 'kodak',
             subject: 'people',
             image: './styles/assets/canon-kodak-people.jpg',
-            alt:'A girl kicking her leg in the air.'
+            alt:'A girl karate kicking her leg in the air.'
         },
         {
             film: 'kodak',
@@ -188,7 +156,7 @@ cameraApp.cameras = {
             film: 'ilford',
             subject: 'landscape',
             image: './styles/assets/canon-ilford-landscape.jpg',
-            alt:'A large waterfall in Iceland.'
+            alt:'A large waterfall in Iceland with a black sand beach.'
         },
         {
             film: 'ilford',
@@ -205,6 +173,7 @@ cameraApp.cameras = {
     ]
 }
 
+// APPENDED FILTERS OBJECT
 cameraApp.photoFilters = {
     grain: {
         link: './styles/assets/grain.png',
@@ -212,31 +181,36 @@ cameraApp.photoFilters = {
     },
     doubleExposure: {
         link: './styles/assets/double-exposure.png',
-        title: 'A filter overlaying a secondary photo of rocks and water at the Blue Lagoon.'
+        title: 'A filter overlaying a secondary photo of rocks and water at the Blue Lagoon in Iceland.'
     },
     lightLeak: {
         link: './styles/assets/light-leak.png',
-        title: 'A light leak filter displaying effects that happen to film when light is exposed.'
+        title: 'A light leak filter displaying effects that happen to film when it is exposed to light.'
     }
 }
 
 
 
-// create a function that takes the user's camera selection and filters through the options object to find its match and return it
+// a function that takes the user's camera selection and filters through the "Options" object to find its match and return its value
 cameraApp.usersPicks = function (camera, film, subject) {
-    const cameraOptions = cameraApp.cameras[camera]
-    console.log(cameraOptions);
+
+    const cameraOptions = cameraApp.cameras[camera];
   
     cameraOptions.filter((cameraOption) => {
-        // find the film choice and subject choice within the camera array that matches the users selections 
-        if (film === cameraOption.film && subject === cameraOption.subject) {
-            const usersImage = cameraOption.image 
-            const usersImageAlt = cameraOption.alt
 
-            //remove appended content if user makes new selections
+        // find the film choice and subject choice within the camera array that matches the user's selections 
+        if (film === cameraOption.film && subject === cameraOption.subject) {
+
+            const usersImage = cameraOption.image;
+            const usersImageAlt = cameraOption.alt;
+
+            // remove appended content if user makes new selections
             $('.dynamicHeading').empty();
             $('.filmPhoto').empty();
+            $('.photoFilter').empty();
             $('.dynamicText').empty();
+            $('.newPhotoButton').empty();
+            $('.dynamicFilters').empty();
 
             cameraApp.displayPhoto(usersImage, usersImageAlt);
         }
@@ -244,7 +218,9 @@ cameraApp.usersPicks = function (camera, film, subject) {
     });  
 }
 
-//error handeling for form submit
+// error handling for form submit
+// notifies user if not all form fields have been completed
+// if all fields have been complete it runs the rest of the functions
 cameraApp.formErrorHandling = function(){
 
     const checkRadio = $('input:checked').length;
@@ -255,66 +231,59 @@ cameraApp.formErrorHandling = function(){
 
     } else {
 
-        //store the user's selections in variables
+        // store the user's selections in variables
         const usersCameraPick = $('input[name = camera]:checked').val();
         const usersFilmPick = $('input[name = film]:checked').val();
         const usersSubjectPick = $('input[name = subject]:checked').val();
 
-        //and run the rest of the functions
+        // run the rest of the functions
         cameraApp.usersPicks(usersCameraPick, usersFilmPick, usersSubjectPick);
         cameraApp.scrollDown();
         cameraApp.displayInfo(usersCameraPick, usersFilmPick);
         cameraApp.displayFilters();
-        cameraApp.takeAnotherPhoto();
-        
-    }
-    
+        cameraApp.takeAnotherPhoto(); 
+    }  
 }
 
-//create a function that will scroll down the page on submit
+// a function that scrolls down the page to the appended content when the user submits the form
 cameraApp.scrollDown = function () {
+
     $('html, body').animate({
+
         scrollTop: $('section').offset().top
-    }, 1000)
-};
 
-
-//create a function that will scroll back to the top when user clicks, take another photo
-cameraApp.scrollUp = function () {
-    $('html, body').animate({
-        scrollTop: $('form').offset().top
-    }, 1000)
+    }, 1000);
 }
 
 
-//create a function that displays the photo and accompanied text on the page
+// a function that appends the heading, image (based on user's selections), and styling to the page
 cameraApp.displayPhoto = function(source, altText) {
 
     const heading = $('<h2>').text('Welcome to the club');
     const subHeading = $('<p>').text('This is your photo!');
-    const image = $('<img>').attr('src', source).attr('alt', altText).css({ border: '1px solid black', padding: '25px' });
+    const image = $('<img>').attr('src', source).attr('alt', altText).css({ border: '1px solid black', padding: '25px'});
     const tape = $('<img>').attr('src', './styles/assets/tape.png').addClass('tape');
 
     $('.dynamicHeading').append(heading, subHeading);
     $('.filmPhoto').append(image, tape);
 }
 
-//create a function that appends text to the page based on user's selections
-//create a conditional that adjusts text for proper grammar
+// a function that appends text to the page based on user's selections (displays type of camera and film selected)
+// a conditional that adjusts text based on the camera selected for proper grammar
 cameraApp.displayInfo = function(cameraSelected, filmSelected) {
 
-    let a = 'a'
+    let a = 'a';
+
     if (cameraSelected === 'olympus') {
         a = 'an';
     }
 
-    const cameraInfo = $('<p>').append(`Shot on ${a} <span class="special">${cameraSelected}</span> camera using <span class="special">${filmSelected}</span> film.`)
+    const cameraInfo = $('<p>').append(`Shot on ${a} <span class="special">${cameraSelected}</span> camera using <span class="special">${filmSelected}</span> film.`);
 
     $('.dynamicText').append(cameraInfo);
-    
 }
 
-//create a function that appends buttons that apply image filters to the page 
+// a function that appends buttons to that page that apply image filters when clicked
 cameraApp.displayFilters = function() {
 
     const filterHeading = $('<h3>').text('Add a filter');
@@ -328,10 +297,18 @@ cameraApp.displayFilters = function() {
     cameraApp.applyFilters();
 }
 
+// a function that scrolls back to the top of the page when the user clicks the button "take another photo"
+cameraApp.scrollUp = function () {
 
-//create a function that appends a take another photo button to the page
-//create an event listener for when the user clicks the button, restarting the quiz
+    $('html, body').animate({
 
+        scrollTop: $('form').offset().top
+
+    }, 1000);
+}
+
+// a function that appends the "take another photo" button to the page, which allows to user to re-take the quiz
+// an event listener for when the user clicks the button, removing the appended content and restarting the quiz
 cameraApp.takeAnotherPhoto = function(){
 
     const tryAgain = $('<button>').text('Take another Photo');
@@ -347,12 +324,12 @@ cameraApp.takeAnotherPhoto = function(){
         $('.dynamicFilters').empty();
 
         cameraApp.scrollUp();
-    })
+    });
 }
 
 
-// create an event listener for when the user clicks a filter button
-//on click a filter specific to the button will apply
+// an event listener for when the user clicks a filter button
+// on click a filter, specific to the button the user chose will apply
 cameraApp.applyFilters = function(){
 
     $('.filter').on('click', function () {
@@ -372,16 +349,18 @@ cameraApp.applyFilters = function(){
 
             $('.photoFilter').append(filteredImage);
         }
-    })
+    });
 }
 
 
 
-//INIT FUNCTION: kicks off the app
+// INIT FUNCTION: kicks off the app
 cameraApp.init = function(){
     
-    //create an event listener for when the user submits the form 
+    // an event listener for when the user submits the form 
+    // calling the error handling function which calls the rest of the functions
     $('form').on('submit', function (e) {
+
         e.preventDefault();
        
         cameraApp.formErrorHandling();
@@ -389,8 +368,7 @@ cameraApp.init = function(){
 }
 
 
-//DOCUMENT READY FUNCTION
+// DOCUMENT READY FUNCTION
 $(function(){
     cameraApp.init();
 });
-
