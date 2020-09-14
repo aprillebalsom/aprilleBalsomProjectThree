@@ -2,11 +2,13 @@
 legend h2 {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     text-align: left;
+    
     position: relative;
 }
 
 .optionContainer {
     padding: 0 0 60px;
+
     display: flex;
     justify-content: space-between;
 }
@@ -33,6 +35,7 @@ label {
     &:hover {
         background-color: $buttonColor;
         color: $highlightedFontColor;
+
         letter-spacing: 6px;
     }
 }
@@ -43,18 +46,17 @@ label {
 
 [type="radio"] {
     position: absolute;
+
     opacity: 0;
 }
 
 input[type="radio"]:checked + label,
 input[type="radio"]:focus + label,
 input[type="radio"]:active + label {
-
     background-color: $buttonColor;
 }
 
 input[type="radio"]:focus + label {
-    
     color: $highlightedFontColor;
 
     letter-spacing: 6px;
@@ -131,6 +133,7 @@ legend h2::before,
     }
 }
 
+//CSS DRAWN ARROWS
 .arrow1::before,
 .arrow1::after ,
 .arrow2::before, 
@@ -144,6 +147,7 @@ legend h2::before,
     position: absolute;
 }
 
+//ARROW ONE
 .arrow1::before,
 .arrow1::after  {
     left: -30%;
@@ -163,6 +167,7 @@ legend h2::before,
     bottom: 60%;
 }
 
+//ARROW TWO
 .arrow2::before,
 .arrow2::after {
     bottom: 79%;

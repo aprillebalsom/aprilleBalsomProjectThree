@@ -25,15 +25,14 @@ footer {
 .icons {
     display: flex;
     flex-direction: row;
-
+ 
     a {
         font-size: clamp(2rem, 2vw, 2.8rem);
-        padding: 10px;
+
+        padding: 10px 10px 10px 0;
+        
         display: block;
 
-        &:first-of-type {
-            padding-left: 0;
-        }
     }
 }
 

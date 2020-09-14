@@ -1,4 +1,6 @@
 //MEDIA QUERIES START HERE
+
+//landscape tablet and small desktops
 @media (max-width: 940px) {
 
     label,
@@ -12,6 +14,7 @@
     }
 }
 
+//landscape phone and portrait tablets
 @media (max-width: 768px) {
 
     header img {
@@ -57,9 +60,9 @@
 
         padding-top: 10px;
     }
-
 }
 
+// landscape phones
 @media (max-width: 560px) {
 
     body {
@@ -114,6 +117,7 @@
     }
 }
 
+// portrait phones and down
 @media (max-width: 420px) {
 
     h1 span {

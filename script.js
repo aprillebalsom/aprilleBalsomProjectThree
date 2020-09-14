@@ -1,6 +1,7 @@
 // APP OBJECT
 const cameraApp = {};
 
+
 // APPENDED IMAGE CONTENT OBJECT
 cameraApp.cameras = {
     leica: [
@@ -173,6 +174,7 @@ cameraApp.cameras = {
     ]
 }
 
+
 // APPENDED FILTERS OBJECT
 cameraApp.photoFilters = {
     grain: {
@@ -190,44 +192,16 @@ cameraApp.photoFilters = {
 }
 
 
-
-// a function that takes the user's camera selection and filters through the "Options" object to find its match and return its value
-cameraApp.usersPicks = function (camera, film, subject) {
-
-    const cameraOptions = cameraApp.cameras[camera];
-  
-    cameraOptions.filter((cameraOption) => {
-
-        // find the film choice and subject choice within the camera array that matches the user's selections 
-        if (film === cameraOption.film && subject === cameraOption.subject) {
-
-            const usersImage = cameraOption.image;
-            const usersImageAlt = cameraOption.alt;
-
-            // remove appended content if user makes new selections
-            $('.dynamicHeading').empty();
-            $('.filmPhoto').empty();
-            $('.photoFilter').empty();
-            $('.dynamicText').empty();
-            $('.newPhotoButton').empty();
-            $('.dynamicFilters').empty();
-
-            cameraApp.displayPhoto(usersImage, usersImageAlt);
-        }
-
-    });  
-}
-
-// error handling for form submit
+// three - error handling for form submit
 // notifies user if not all form fields have been completed
 // if all fields have been complete it runs the rest of the functions
-cameraApp.formErrorHandling = function(){
+cameraApp.formErrorHandling = function () {
 
     const checkRadio = $('input:checked').length;
-  
+
     if (checkRadio < 3) {
 
-       alert(`oops! looks like you're missing a step. please fill out all sections + try again!`);
+        alert(`oops! looks like you're missing a step. please fill out all sections + try again!`);
 
     } else {
 
@@ -241,11 +215,40 @@ cameraApp.formErrorHandling = function(){
         cameraApp.scrollDown();
         cameraApp.displayInfo(usersCameraPick, usersFilmPick);
         cameraApp.displayFilters();
-        cameraApp.takeAnotherPhoto(); 
-    }  
+        cameraApp.takeAnotherPhoto();
+    }
 }
 
-// a function that scrolls down the page to the appended content when the user submits the form
+
+// four - a function that takes the user's camera selection and filters through the "Options" object to find its match and return its value
+cameraApp.usersPicks = function (camera, film, subject) {
+
+    const cameraOptions = cameraApp.cameras[camera];
+  
+    cameraOptions.filter((cameraOption) => {
+
+        // find the film choice and subject choice within the camera array that matches the user's selections 
+        if (film === cameraOption.film && subject === cameraOption.subject) {
+
+            const usersImage = cameraOption.image;
+            const usersImageAlt = cameraOption.alt;
+
+            // remove appended content if user makes new selections when submitting the form again
+            $('.dynamicHeading').empty();
+            $('.filmPhoto').empty();
+            $('.photoFilter').empty();
+            $('.dynamicText').empty();
+            $('.newPhotoButton').empty();
+            $('.dynamicFilters').empty();
+
+            cameraApp.displayPhoto(usersImage, usersImageAlt);
+        }
+
+    });  
+}
+
+
+// five - a function that scrolls down the page to the appended content when the user submits the form
 cameraApp.scrollDown = function () {
 
     $('html, body').animate({
@@ -256,21 +259,9 @@ cameraApp.scrollDown = function () {
 }
 
 
-// a function that appends the heading, image (based on user's selections), and styling to the page
-cameraApp.displayPhoto = function(source, altText) {
-
-    const heading = $('<h2>').text('Welcome to the club');
-    const subHeading = $('<p>').text('This is your photo!');
-    const image = $('<img>').attr('src', source).attr('alt', altText).css({ border: '1px solid black', padding: '25px'});
-    const tape = $('<img>').attr('src', './styles/assets/tape.png').addClass('tape');
-
-    $('.dynamicHeading').append(heading, subHeading);
-    $('.filmPhoto').append(image, tape);
-}
-
-// a function that appends text to the page based on user's selections (displays type of camera and film selected)
+// six - a function that appends text to the page based on user's selections (displays type of camera and film selected) when the form is submitted with no errors
 // a conditional that adjusts text based on the camera selected for proper grammar
-cameraApp.displayInfo = function(cameraSelected, filmSelected) {
+cameraApp.displayInfo = function (cameraSelected, filmSelected) {
 
     let a = 'a';
 
@@ -283,7 +274,8 @@ cameraApp.displayInfo = function(cameraSelected, filmSelected) {
     $('.dynamicText').append(cameraInfo);
 }
 
-// a function that appends buttons to that page that apply image filters when clicked
+
+// seven - a function that appends buttons to that page once the form is submitted with no errors that apply image filters when clicked upon
 cameraApp.displayFilters = function() {
 
     const filterHeading = $('<h3>').text('Add a filter');
@@ -297,17 +289,46 @@ cameraApp.displayFilters = function() {
     cameraApp.applyFilters();
 }
 
-// a function that scrolls back to the top of the page when the user clicks the button "take another photo"
-cameraApp.scrollUp = function () {
 
-    $('html, body').animate({
+// eight - a function that appends the heading, image (based on user's selections), and styling to the page when the form is submitted with no errors
+cameraApp.displayPhoto = function (source, altText) {
 
-        scrollTop: $('form').offset().top
+    const heading = $('<h2>').text('Welcome to the club');
+    const subHeading = $('<p>').text('This is your photo!');
+    const image = $('<img>').attr('src', source).attr('alt', altText).css({ border: '1px solid black', padding: '25px' });
+    const tape = $('<img>').attr('src', './styles/assets/tape.png').addClass('tape');
 
-    }, 1000);
+    $('.dynamicHeading').append(heading, subHeading);
+    $('.filmPhoto').append(image, tape);
 }
 
-// a function that appends the "take another photo" button to the page, which allows to user to re-take the quiz
+
+// nine - an event listener for when the user clicks a filter button
+// on click a filter, specific to the button the user chose will apply
+cameraApp.applyFilters = function () {
+
+    $('.filter').on('click', function () {
+
+        $('.photoFilter').empty();
+
+        const filterPick = $(this).attr('id');
+
+        if (filterPick === 'reset') {
+
+            $('.photoFilter').empty();
+
+        } else {
+
+            const selectedFilter = cameraApp.photoFilters[filterPick];
+            const filteredImage = $('<img>').attr('src', selectedFilter.link).attr('alt', selectedFilter.title);
+
+            $('.photoFilter').append(filteredImage);
+        }
+    });
+}
+
+
+// ten - a function that appends the "take another photo" button to the page when the form is submitted without errors, which allows to user to re-take the quiz
 // an event listener for when the user clicks the button, removing the appended content and restarting the quiz
 cameraApp.takeAnotherPhoto = function(){
 
@@ -328,37 +349,22 @@ cameraApp.takeAnotherPhoto = function(){
 }
 
 
-// an event listener for when the user clicks a filter button
-// on click a filter, specific to the button the user chose will apply
-cameraApp.applyFilters = function(){
+// eleven - a function that scrolls back to the top of the page when the user clicks the button "take another photo" allowing the user to restart the quiz
+cameraApp.scrollUp = function () {
 
-    $('.filter').on('click', function () {
+    $('html, body').animate({
 
-        $('.photoFilter').empty();
+        scrollTop: $('form').offset().top
 
-        const filterPick = $(this).attr('id');
-      
-        if (filterPick === 'reset') {
-
-            $('.photoFilter').empty();
-
-        } else {
-
-            const selectedFilter = cameraApp.photoFilters[filterPick];
-            const filteredImage = $('<img>').attr('src', selectedFilter.link).attr('alt', selectedFilter.title);
-
-            $('.photoFilter').append(filteredImage);
-        }
-    });
+    }, 1000);
 }
 
 
-
-// INIT FUNCTION: kicks off the app
+// two - INIT FUNCTION: kicks off the app
 cameraApp.init = function(){
     
     // an event listener for when the user submits the form 
-    // calling the error handling function which calls the rest of the functions
+    // calling the error handling function which sends an alert if incomplete or calls the rest of the functions
     $('form').on('submit', function (e) {
 
         e.preventDefault();
@@ -368,7 +374,8 @@ cameraApp.init = function(){
 }
 
 
-// DOCUMENT READY FUNCTION
+//one - DOCUMENT READY FUNCTION
+// run the init function when the document loads
 $(function(){
     cameraApp.init();
 });

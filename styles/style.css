@@ -361,12 +361,8 @@ footer a {
 
 .icons a {
   font-size: clamp(2rem, 2vw, 2.8rem);
-  padding: 10px;
+  padding: 10px 10px 10px 0;
   display: block;
-}
-
-.icons a:first-of-type {
-  padding-left: 0;
 }
 
 .creatorInfo {
