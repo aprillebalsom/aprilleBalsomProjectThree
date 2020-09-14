@@ -631,6 +631,10 @@ button:hover, button:focus {
   width: calc(35% - 30px);
 }
 
+.newPhotoButton {
+  width: 61.75%;
+}
+
 .tape {
   width: 35%;
   position: absolute;
@@ -676,6 +680,9 @@ button:hover, button:focus {
   }
   button {
     margin: 20px 0;
+  }
+  .newPhotoButton {
+    width: 59.75%;
   }
   .formButton {
     width: 50%;
@@ -743,8 +750,18 @@ button:hover, button:focus {
     padding-top: 20px;
     width: 100%;
   }
-  .dynamicFilters {
+  .dynamicFilters,
+  .newPhotoButton {
     width: 80%;
+  }
+  .dynamicFilters {
+    padding-top: 45px;
+  }
+  .newPhotoButton {
+    padding-top: 20px;
+  }
+  .newPhotoButton {
+    margin: 0 auto;
   }
 }
 

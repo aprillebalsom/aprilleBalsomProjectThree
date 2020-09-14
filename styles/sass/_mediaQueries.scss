@@ -40,6 +40,10 @@
         margin: 20px 0;  
     }
 
+    .newPhotoButton {
+        width: 59.75%;
+    }
+
     .formButton {
         width: 50%;
 
@@ -112,8 +116,23 @@
         width: 100%
     }
 
-    .dynamicFilters {
+    .dynamicFilters,
+    .newPhotoButton {
         width: 80%;
+    }
+
+    .dynamicFilters {
+        padding-top: 45px;
+
+    }
+
+    .newPhotoButton {
+        padding-top: 20px;
+
+    }
+
+    .newPhotoButton {
+        margin: 0 auto;
     }
 }
 

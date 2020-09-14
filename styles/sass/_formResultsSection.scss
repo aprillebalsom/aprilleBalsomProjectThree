@@ -33,7 +33,6 @@ section {
     bottom: 0;
     right: 0;
     left: 0;
-
     z-index: 10;
 }
 
@@ -85,6 +84,10 @@ button {
 
 .dynamicFilters {
     width: calc(35% - 30px);
+}
+
+.newPhotoButton {
+    width: 61.75%;
 }
 
 .tape {
