@@ -49,10 +49,12 @@ label {
 input[type="radio"]:checked + label,
 input[type="radio"]:focus + label,
 input[type="radio"]:active + label {
+
     background-color: $buttonColor;
 }
 
 input[type="radio"]:focus + label {
+    
     color: $highlightedFontColor;
 
     letter-spacing: 6px;

@@ -251,7 +251,7 @@ cameraApp.formErrorHandling = function(){
   
     if (checkRadio < 3) {
 
-       alert(`oops! looks like you're missing a step. please fill out all section + try to take your photo again!`);
+       alert(`oops! looks like you're missing a step. please fill out all sections + try again!`);
 
     } else {
 
