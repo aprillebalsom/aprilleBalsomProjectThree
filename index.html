@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAMERA CLUB</title>
-    <!-- favicon -->
     <link rel="icon" type="image" href="./styles/assets/favicon.svg">
     <script src="https://kit.fontawesome.com/a17f5cc577.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap"
@@ -23,7 +22,7 @@
            
             <img src="./styles/assets/header-camera.svg" alt="A film camera icon.">
             <h1><span>Camera Club</span></h1>
-            <p>Create film photos in just 4 clicks</p>
+            <p>Create film photos in just 4 clicks!</p>
         
         </header>
 
@@ -43,8 +42,10 @@
                             <img  src="./styles/assets/leica-camera.svg" alt="A Lecia film camera icon.">
 
                             <input type="radio" id="leica" value="leica" name="camera">
+                            <p class="sr-only">Click here if you would like to select a Leica camera</p>
                             <label for="leica">Leica</label>
                            
+
                         </div>
 
                         <div class="option">
@@ -52,17 +53,21 @@
                             <img src="./styles/assets/olympus-camera.svg" alt="An Olympus film camera icon.">
 
                             <input type="radio" id="olympus" value="olympus" name="camera">
+                            <p class="sr-only">Click here if you would like to select an Olympus camera</p>
                             <label for="olympus">Olympus</label>
                             
                         </div>
 
                         <div class="option">
+
                             <img src="./styles/assets/canon-camera.svg" alt="A Canon film camera icon.">
 
                             <input type="radio" id="canon" value="canon" name="camera">
+                            <p class="sr-only">Click here if you would like to select a Canon camera</p>
                             <label for="canon">Canon</label>
                           
                         </div>
+
                     </div>
 
                 </fieldset>
@@ -75,25 +80,35 @@
                     <div class="optionContainer">
                         
                         <div class="option">
+
                             <img src="./styles/assets/kodak-film.svg" alt="A roll of film icon, Kodak brand.">
                         
                             <input type="radio" id="kodak" value="kodak" name="film">
+                            <p class="sr-only">Click here if you would like to select Kodak film</p>
                             <label for="kodak">Kodak</label>
+
                         </div>
 
                         <div class="option">
+
                             <img src="./styles/assets/fuji-film.svg" alt="A roll of film icon, Fuji brand.">
 
                             <input type="radio" id="fuji" value="fuji" name="film">
+                            <p class="sr-only">Click here if you would like to select Fuji film</p>
                             <label for="fuji">Fuji</label>
+
                         </div>
 
                         <div class="option">
+
                             <img src="./styles/assets/ilford-film.svg" alt="A roll of film icon, Ilford brand.">
 
                             <input type="radio" id="ilford" value="ilford" name="film">
+                            <p class="sr-only">Click here if you would like to select Ilford film</p>
                             <label for="ilford">Ilford</label>
+
                         </div>
+
                     </div>
 
                 </fieldset>
@@ -104,33 +119,43 @@
                     </legend>
 
                     <div class="optionContainer">
+
                         <div class="option">
                             
                             <img src="./styles/assets/landscape-subject.svg" alt="A landscape icon with two cacti and a mountain along a road.">
 
                             <input type="radio" id="landscape" value="landscape" name="subject">
+                            <p class="sr-only">Click here if you would like to select a landscape as your subject</p>
                             <label class="longName" for="landscape">Landscape</label>
 
                         </div>
 
                         <div class="option">
+
                             <img src="./styles/assets/people-subject.svg" alt="A group of three people.">
 
                             <input type="radio" id="people" value="people" name="subject">
+                            <p class="sr-only">Click here if you would like to select people as your subject</p>
                             <label for="people">People</label>
+
                         </div>
 
                         <div class="option">
+
                             <img src="./styles/assets/surprise-subject.svg" alt="A rainbow icon.">
 
                             <input type="radio" id="surprise" value="surprise" name="subject">
+                            <p class="sr-only">Click here if you would like to select a surprise as your subject</p>
                             <label for="surprise">Suprise</label>
+
                         </div>
+
                     </div>
 
                 </fieldset>
 
                 <div class="formSubmit">
+
                     <h2>
                         <div class="highlight">Look through the viewfinder & <span class="accent"> press the button</span> to</div>
                         take your photo
@@ -150,7 +175,9 @@
                         </div>
                       
                     </button>
+
                 </div>
+
             </form>
 
             <!-- DYNAMIC CONTENT -->
@@ -200,21 +227,31 @@
         <!-- START OF FOOTER -->
         <footer>
             <div class="social">
+
                 <h4>Share on social</h4>
 
                 <div class="icons">
-                    <!-- TODO add links -->
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
+
+                    <a href="https://twitter.com/intent/tweet"><i class="fab fa-twitter"></i></a>
+
+                    <a href="http://pinterest.com"><i class="fab fa-pinterest"></i></a>
+
+                    <a href="https://www.facebook.com/sharer.php"><i class="fab fa-facebook-f"></i></a>
+
                 </div>
+
             </div>
 
             <div class="creatorInfo">
+
                 <p>Created at <a href="https://junocollege.com/">Juno College</a></p>
+
                 <p>Designed by <a href="https://apesfilmdiary.com/">Aprille Balsom</a></p>
+
             </div>
+
         </footer>
 
     </div>
@@ -222,8 +259,8 @@
 
 
     <!-- JQUERY + JAVASCRIPT -->
-    <script src='https://code.jquery.com/jquery-3.4.0.min.js'
-        integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+
     <script src="script.js"></script>
 
 </body>
