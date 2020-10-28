@@ -1,7 +1,6 @@
 // APP OBJECT
 const cameraApp = {};
 
-
 // APPENDED IMAGE CONTENT OBJECT
 cameraApp.cameras = {
     leica: [
